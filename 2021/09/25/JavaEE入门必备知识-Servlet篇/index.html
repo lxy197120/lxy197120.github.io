@@ -490,7 +490,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-11
+                    2021-10-14
                 </div>
                 
 
@@ -528,26 +528,26 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211011001024371.png"></p>
-<h1 id="1-Servlet-工作流程以及实现"><a href="#1-Servlet-工作流程以及实现" class="headerlink" title="1.Servlet 工作流程以及实现"></a>1.Servlet 工作流程以及实现</h1><h2 id="1-1：主要内容"><a href="#1-1：主要内容" class="headerlink" title="1.1：主要内容"></a>1.1：主要内容</h2><ul>
+<h2 id="1-Servlet-工作流程以及实现"><a href="#1-Servlet-工作流程以及实现" class="headerlink" title="1.Servlet 工作流程以及实现"></a>1.Servlet 工作流程以及实现</h2><h3 id="1-1：主要内容"><a href="#1-1：主要内容" class="headerlink" title="1.1：主要内容"></a>1.1：主要内容</h3><ul>
 <li>1.创建普通java类</li>
 <li>2.满足Servlet规范（继承HTTPServlet类）</li>
 <li>3.重写service方法（当请求Servlet类时，会自动调用service方法）</li>
 <li>4.设置Servlet对外访问路径<br> 如下：</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210925163435755.png" alt="image-20210925163435755"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210925163435755.png"></p>
 <p>//其中参数代表，localhost:8080/项目名/value可以访问到service（）</p>
-<h2 id="1-2：实现流程"><a href="#1-2：实现流程" class="headerlink" title="1.2：实现流程"></a>1.2：实现流程</h2><p>然后启动Tomcat，idea控制台会显示 Hello！！！，因为接收请求成功，执行service（）方法，然后向浏览器响应66666!</p>
+<h3 id="1-2：实现流程"><a href="#1-2：实现流程" class="headerlink" title="1.2：实现流程"></a>1.2：实现流程</h3><p>然后启动Tomcat，idea控制台会显示 Hello！！！，因为接收请求成功，执行service（）方法，然后向浏览器响应66666!</p>
 <p>谷歌浏览器，鼠标右击打开检查，打开Network，点击viewsource如下：查看请求头和响应头！！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210922215455802.png" alt="image-20210922215455802"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210922215455802.png"> </p>
 <p>通过请求头获知浏览器访问的哪个主机</p>
 <p>再通过请求行获取访问的是哪一个web应用</p>
 <p>再通过请求行中的请求路径获知访问的是哪一个资源</p>
 <p>通过获取资源路径在配置中匹配到真实路径</p>
 <p>服务器会创建servlet对象，（如果是第一次访问，创建servlet实例，并调用init方法进行初始化操作）</p>
 <p>调用service（request，response）方法来处理请求和响应的操作<br>调用service完毕后会返回服务器，由服务器讲response缓冲区的数据取出，以http响应的格式发送给浏览器</p>
-<h2 id="1-3：最终流程总结"><a href="#1-3：最终流程总结" class="headerlink" title="1.3：最终流程总结"></a>1.3：最终流程总结</h2><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210925163212830.png" alt="image-20210925163212830"></p>
-<h1 id="2-HttpServletRequest对象"><a href="#2-HttpServletRequest对象" class="headerlink" title="2.HttpServletRequest对象"></a>2.HttpServletRequest对象</h1><p>​    HttpServletRequest对象代表客户端的请求，当客户端通过HTTP协议访问服务器时，HTTP请求头中的所有信息都封装在这个对象中，通过这个对象提供的方法，可以获得客户端请求的所有信息。</p>
-<h2 id="2-1-接收请求"><a href="#2-1-接收请求" class="headerlink" title="2.1.接收请求"></a>2.1.接收请求</h2><h3 id="2-1-1-常用方法"><a href="#2-1-1-常用方法" class="headerlink" title="2.1.1.常用方法"></a>2.1.1.常用方法</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/*1.常用方法
+<h3 id="1-3：最终流程总结"><a href="#1-3：最终流程总结" class="headerlink" title="1.3：最终流程总结"></a>1.3：最终流程总结</h3><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210925163212830.png"></p>
+<h2 id="2-HttpServletRequest对象-请求"><a href="#2-HttpServletRequest对象-请求" class="headerlink" title="2.HttpServletRequest对象(请求)"></a>2.HttpServletRequest对象(请求)</h2><p>​    HttpServletRequest对象代表客户端的请求，当客户端通过HTTP协议访问服务器时，HTTP请求头中的所有信息都封装在这个对象中，通过这个对象提供的方法，可以获得客户端请求的所有信息。</p>
+<h3 id="2-1-接收请求"><a href="#2-1-接收请求" class="headerlink" title="2.1.接收请求"></a>2.1.接收请求</h3><h4 id="2-1-1-常用方法"><a href="#2-1-1-常用方法" class="headerlink" title="2.1.1.常用方法"></a>2.1.1.常用方法</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/*1.常用方法
 *   1.获取请求方式（get/post等）
 *   2.获取请求路径（从http开始到？结束）
 *   3.获取请求部分路径（从项目路径开始到？结束）
@@ -562,8 +562,8 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 //        System.out.println(req.getContextPath());
 </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210925163053662.png" alt="image-20210925163053662"></p>
-<h3 id="2-1-2-获取请求参数"><a href="#2-1-2-获取请求参数" class="headerlink" title="2.1.2.获取请求参数"></a>2.1.2.获取请求参数</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>   <span class="token number">1.</span>获取指定参数名的参数值
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210925163053662.png"></p>
+<h4 id="2-1-2-获取请求参数"><a href="#2-1-2-获取请求参数" class="headerlink" title="2.1.2.获取请求参数"></a>2.1.2.获取请求参数</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>   <span class="token number">1.</span>获取指定参数名的参数值
 <span class="token operator">*</span>       request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"参数名"</span><span class="token punctuation">)</span>
 <span class="token operator">*</span>       注：
 <span class="token operator">*</span>           <span class="token number">1.</span>表单提交：
@@ -582,29 +582,29 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 <span class="token comment">//获取多个参数</span>
 <span class="token comment">//System.out.println(req.getParameterValues("hobby").length);</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210923105454863.png" alt="image-20210923105454863"></p>
-<h2 id="2-2-请求乱码问题"><a href="#2-2-请求乱码问题" class="headerlink" title="2.2.请求乱码问题"></a>2.2.请求乱码问题</h2><h3 id="2-2-1-乱码原因"><a href="#2-2-1-乱码原因" class="headerlink" title="2.2.1.乱码原因"></a>2.2.1.乱码原因</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">request有默认的解析编码，ISO<span class="token operator">-</span><span class="token number">8859</span><span class="token operator">-</span><span class="token number">1</span>，这种编码不支持中文，传递中文参数必定乱码<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210923105454863.png"></p>
+<h3 id="2-2-请求乱码问题"><a href="#2-2-请求乱码问题" class="headerlink" title="2.2.请求乱码问题"></a>2.2.请求乱码问题</h3><h4 id="2-2-1-乱码原因"><a href="#2-2-1-乱码原因" class="headerlink" title="2.2.1.乱码原因"></a>2.2.1.乱码原因</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">request有默认的解析编码，ISO<span class="token operator">-</span><span class="token number">8859</span><span class="token operator">-</span><span class="token number">1</span>，这种编码不支持中文，传递中文参数必定乱码<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="2-2-2-解决方案"><a href="#2-2-2-解决方案" class="headerlink" title="2.2.2.解决方案"></a>2.2.2.解决方案</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>      <span class="token number">1.</span>只针对POST请求的乱码问题（处理所有参数）
+<h4 id="2-2-2-解决方案"><a href="#2-2-2-解决方案" class="headerlink" title="2.2.2.解决方案"></a>2.2.2.解决方案</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>      <span class="token number">1.</span>只针对POST请求的乱码问题（处理所有参数）
 <span class="token operator">*</span>          request<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span>UTF<span class="token operator">-</span><span class="token number">8</span><span class="token punctuation">)</span>
 <span class="token operator">*</span>      <span class="token number">2.</span>任意请求方式都有效（一次处理一个参数）
 <span class="token operator">*</span>          <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"参数名"</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token string">"ISO-8859-1"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token operator">*</span>          目前<span class="token class-name">Tomcat8</span>及以上版本<span class="token class-name">Get</span>请求不会出现乱码，所以只要处理<span class="token class-name">Post</span>请求参数乱码即可<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="2-3-请求转发"><a href="#2-3-请求转发" class="headerlink" title="2.3.请求转发"></a>2.3.请求转发</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>   一种跳转方式
+<h3 id="2-3-请求转发"><a href="#2-3-请求转发" class="headerlink" title="2.3.请求转发"></a>2.3.请求转发</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>   一种跳转方式
 <span class="token operator">*</span>   <span class="token number">1.</span>服务端跳转
 <span class="token operator">*</span>   <span class="token number">2.</span>地址栏不发生改变
 <span class="token operator">*</span>   <span class="token number">3.</span>只有一次请求
 <span class="token operator">*</span>   <span class="token number">4.</span>数据可以共享<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="2-4-request作用域"><a href="#2-4-request作用域" class="headerlink" title="2.4.request作用域"></a>2.4.request作用域</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>     只在一次请求中有效，只在请求转发跳转有效
+<h3 id="2-4-request作用域"><a href="#2-4-request作用域" class="headerlink" title="2.4.request作用域"></a>2.4.request作用域</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>     只在一次请求中有效，只在请求转发跳转有效
       req<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"msg"</span><span class="token punctuation">,</span><span class="token string">"姓名或者密码不正确！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//设置作用域，（任意类型的数据）</span>
       req<span class="token punctuation">.</span><span class="token function">getRequestDispatcher</span><span class="token punctuation">(</span><span class="token string">"login.jsp"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	  req<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"参数名"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//获取作用域的值</span>
 	  req<span class="token punctuation">.</span><span class="token function">removeAttribute</span><span class="token punctuation">(</span><span class="token string">"参数名"</span><span class="token punctuation">)</span><span class="token comment">//移除指定作用域的值</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="3-HttpServletResponse对象"><a href="#3-HttpServletResponse对象" class="headerlink" title="3.HttpServletResponse对象"></a>3.HttpServletResponse对象</h1><p>　　HttpServletResponse对象代表服务器的响应。这个对象中封装了向客户端发送数据、发送响应头，发送响应状态码的方法。查看HttpServletResponse的API，可以看到这些相关的方法。</p>
-<h2 id="3-1-响应数据"><a href="#3-1-响应数据" class="headerlink" title="3.1.响应数据"></a>3.1.响应数据</h2><p>​        接收到客户端请求后，可以通过HttPServletResponse对象直接进行响应，响应时需要获取输出流</p>
+<h2 id="3-HttpServletResponse对象"><a href="#3-HttpServletResponse对象" class="headerlink" title="3.HttpServletResponse对象"></a>3.HttpServletResponse对象</h2><p>　　HttpServletResponse对象代表服务器的响应。这个对象中封装了向客户端发送数据、发送响应头，发送响应状态码的方法。查看HttpServletResponse的API，可以看到这些相关的方法。</p>
+<h3 id="3-1-响应数据"><a href="#3-1-响应数据" class="headerlink" title="3.1.响应数据"></a>3.1.响应数据</h3><p>​        接收到客户端请求后，可以通过HttPServletResponse对象直接进行响应，响应时需要获取输出流</p>
 <p>​        有两种形式：</p>
 <p>​                字符输出流 getWriter()</p>
 <p>​                字节输出流getOutputStream()</p>
@@ -618,7 +618,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
         outputStream.write(&quot;你好世界&quot;.getBytes());
     &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="3-2-响应乱码问题"><a href="#3-2-响应乱码问题" class="headerlink" title="3.2.响应乱码问题"></a>3.2.响应乱码问题</h2><p>​        对于getWriter()获取到的字符流，响应中文必定出现字符乱码问题，由于服务器端在进行编码时刻<br>​    会默认使用ISO-8859-1，该编码方式不支持中文<br>​        要解决这种乱码只能在服务器端告知服务器使用一种能支持中文编码格式，比如我们常用的”UTF-8”</p>
+<h3 id="3-2-响应乱码问题"><a href="#3-2-响应乱码问题" class="headerlink" title="3.2.响应乱码问题"></a>3.2.响应乱码问题</h3><p>​        对于getWriter()获取到的字符流，响应中文必定出现字符乱码问题，由于服务器端在进行编码时刻<br>​    会默认使用ISO-8859-1，该编码方式不支持中文<br>​        要解决这种乱码只能在服务器端告知服务器使用一种能支持中文编码格式，比如我们常用的”UTF-8”</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">resp<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>​        此时只完成了一半的工作，要保证数据显示。还还需要指定客户端解码方式</p>
@@ -628,7 +628,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 <p>或者使用如下代码替代上诉操作，同时指定服务器和客户端</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">resp<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"text/html;charset = UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h2 id="3-3-重定向"><a href="#3-3-重定向" class="headerlink" title="3.3.重定向"></a>3.3.重定向</h2><pre class="line-numbers language-none"><code class="language-none">* 3.重定向
+<h3 id="3-3-重定向"><a href="#3-3-重定向" class="headerlink" title="3.3.重定向"></a>3.3.重定向</h3><pre class="line-numbers language-none"><code class="language-none">* 3.重定向
 *      一种跳转方式
 *      由服务端指导客户端跳转
 *      1.客户端跳转
@@ -638,7 +638,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 *
 * 请求转发只能跳转到当前站点下的资源，不可以跨域，重定向可以跳转到任意资源<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="3-4-重定向和转发的区别"><a href="#3-4-重定向和转发的区别" class="headerlink" title="3.4.重定向和转发的区别"></a>3.4.重定向和转发的区别</h2><p>​    请求转发:一种跳转方式</p>
+<h3 id="3-4-重定向和转发的区别"><a href="#3-4-重定向和转发的区别" class="headerlink" title="3.4.重定向和转发的区别"></a>3.4.重定向和转发的区别</h3><p>​    请求转发:一种跳转方式</p>
 <p>1.服务端跳转</p>
 <p>2.地址栏不发生改变</p>
 <p>3.存在一次请求</p>
@@ -646,17 +646,17 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">后面<span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span><span class="token punctuation">)</span>表示请求转发但前站点其他资源时，把对象一起传过去
 req<span class="token punctuation">.</span><span class="token function">getRequestDispatcher</span><span class="token punctuation">(</span><span class="token string">"login.jsp"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h1 id="4-Cookie对象"><a href="#4-Cookie对象" class="headerlink" title="4.Cookie对象"></a>4.Cookie对象</h1><p>​        Cookie是浏览器提供的一种技术，通过服务器的程序将一些只需保存在客户端，或者在客户端进行处理大数据，放在本地计算机上，不需要通过网络传输，因而提高网页处理效率，并且能够减少服务器的负载，但是由于Cookie是服务端保存在客户端的信息，所以其安全性也是很差的。例如常用的记住密码则可以通过Cookie来实现</p>
+<h2 id="4-Cookie对象"><a href="#4-Cookie对象" class="headerlink" title="4.Cookie对象"></a>4.Cookie对象</h2><p>​        Cookie是浏览器提供的一种技术，通过服务器的程序将一些只需保存在客户端，或者在客户端进行处理大数据，放在本地计算机上，不需要通过网络传输，因而提高网页处理效率，并且能够减少服务器的负载，但是由于Cookie是服务端保存在客户端的信息，所以其安全性也是很差的。例如常用的记住密码则可以通过Cookie来实现</p>
 <p>​        有一个专门操作Cookie的类javax.servlet.http.Cookie ，随着服务器端的响应发送给客户端，保存在浏览器，当下一再访问服务器时把Cookie再带回服务器</p>
 <p>​        Cookie的格式： 键值对用“=”连接，多个键值对用“；”隔开</p>
-<h2 id="4-1-cookie的创建与发送"><a href="#4-1-cookie的创建与发送" class="headerlink" title="4.1.cookie的创建与发送"></a>4.1.cookie的创建与发送</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//得到Cookie对象</span>
+<h3 id="4-1-cookie的创建与发送"><a href="#4-1-cookie的创建与发送" class="headerlink" title="4.1.cookie的创建与发送"></a>4.1.cookie的创建与发送</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//得到Cookie对象</span>
 <span class="token class-name">Cookie</span> cookie <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cookie</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">,</span><span class="token string">"admin"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//发送Cookie（将cookie对象响应发送给客户端）</span>
 resp<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span>cookie<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name">Cookie</span> cookie1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cookie</span><span class="token punctuation">(</span><span class="token string">"pwd"</span><span class="token punctuation">,</span><span class="token string">"123456"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 resp<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span>cookie1<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="4-2-cookie的获取"><a href="#4-2-cookie的获取" class="headerlink" title="4.2.cookie的获取"></a>4.2.cookie的获取</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span> <span class="token class-name">Cookie</span>的获取
+<h3 id="4-2-cookie的获取"><a href="#4-2-cookie的获取" class="headerlink" title="4.2.cookie的获取"></a>4.2.cookie的获取</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span> <span class="token class-name">Cookie</span>的获取
 <span class="token operator">*</span>      获取所有<span class="token class-name">Cookie</span>对象，返回<span class="token class-name">Cookie</span>数组
 <span class="token operator">*</span>      request<span class="token punctuation">.</span><span class="token function">getCookies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -677,7 +677,7 @@ resp<span class="token punctuation">.</span><span class="token function">addCook
 
 
 
-<h2 id="4-3-cookie设置到期时间"><a href="#4-3-cookie设置到期时间" class="headerlink" title="4.3.cookie设置到期时间"></a>4.3.cookie设置到期时间</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span> <span class="token class-name">Cookie</span>失效时间
+<h3 id="4-3-cookie设置到期时间"><a href="#4-3-cookie设置到期时间" class="headerlink" title="4.3.cookie设置到期时间"></a>4.3.cookie设置到期时间</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span> <span class="token class-name">Cookie</span>失效时间
 <span class="token operator">*</span>      cookie默认是关闭浏览器失效<span class="token punctuation">(</span>与服务器是否关闭无关<span class="token punctuation">)</span>
 <span class="token operator">*</span>
 <span class="token operator">*</span>      通过maxAge设置cookie失效时间
@@ -713,7 +713,7 @@ cook<span class="token punctuation">.</span><span class="token function">setMaxA
 resp<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span>cook<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
-<h2 id="4-4-cookie的注意点"><a href="#4-4-cookie的注意点" class="headerlink" title="4.4.cookie的注意点"></a>4.4.cookie的注意点</h2><ul>
+<h3 id="4-4-cookie的注意点"><a href="#4-4-cookie的注意点" class="headerlink" title="4.4.cookie的注意点"></a>4.4.cookie的注意点</h3><ul>
 <li><p>Cookie保存在当前浏览器中</p>
 <p>​    在一般站点常常有记住用户名这样一个操作，该操作只是将该信息保存在本机上，换电脑以后这些信息就无效了。而且cookie还不能跨浏览器。</p>
 </li>
@@ -726,12 +726,12 @@ resp<span class="token punctuation">.</span><span class="token function">addCook
 <span class="token class-name">Cookie</span> cookie <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cookie</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//这个不编码会报错</span>
 resp<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span>cookie<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210925163627061.png" alt="image-20210925163627061">只编码不解码，在输出端会出现这个问题!</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210925163627061.png">只编码不解码，在输出端会出现这个问题!</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//用这个解码响应浏览器</span>
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"name:"</span> <span class="token operator">+</span> <span class="token class-name">URLDecoder</span><span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>cookie<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"value:"</span> <span class="token operator">+</span> <span class="token class-name">URLDecoder</span><span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>cookie<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210923151228648.png" alt="image-20210923151228648">解码后的样子！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210923151228648.png">解码后的样子！</p>
 </li>
 <li><p>同名Cookie问题</p>
 </li>
@@ -743,7 +743,7 @@ resp<span class="token punctuation">.</span><span class="token function">addCook
 <p>​    不同浏览器对Cookie也有限定，Cookie的存储也是有上限的。Cookie是存储在客户端（浏览器）的，而且一般是由服务器端创建和设定的。后期结合Session来实现回话跟踪。</p>
 </li>
 </ul>
-<h2 id="4-5-cookie的路径"><a href="#4-5-cookie的路径" class="headerlink" title="4.5.cookie的路径"></a>4.5.cookie的路径</h2><p>​        Cookie的setPath()可以设置cookie的路径，这个路径直接决定服务器的请求是否会从浏览器加载某些cookie。</p>
+<h3 id="4-5-cookie的路径"><a href="#4-5-cookie的路径" class="headerlink" title="4.5.cookie的路径"></a>4.5.cookie的路径</h3><p>​        Cookie的setPath()可以设置cookie的路径，这个路径直接决定服务器的请求是否会从浏览器加载某些cookie。</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span> <span class="token number">1.</span>在当前项目下的资可以获取
 <span class="token operator">*</span> <span class="token number">2.</span>在当前服务器下的资源可以获取<span class="token operator">-></span>设置路径为<span class="token string">"/"</span>
 <span class="token operator">*</span> <span class="token number">3.</span>在指定项目的资源下可以访问
@@ -769,9 +769,9 @@ resp<span class="token punctuation">.</span><span class="token function">addCook
         cookie04<span class="token punctuation">.</span><span class="token function">setPath</span><span class="token punctuation">(</span><span class="token string">"/JavaWeb/cook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         resp<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span>cookie04<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210923153610785.png" alt="image-20210923153610785">一个项目下可以设置多个资源路径</p>
-<h1 id="5-HttpSession对象"><a href="#5-HttpSession对象" class="headerlink" title="5.HttpSession对象"></a>5.HttpSession对象</h1><p>​        HTTPSession是Java平台对session机制的实现规范，因为它仅仅是个接口，具体到每个web应用服务器的提供商，除了对规范支持之外，仍然会有一些规范里没有规定的细微差异。<br>HTTPSession对象将在用户第1次访问服务器时由容器创建(只有访问JSP、Servlet等程序时才会创建，只访问HTML、image等静态资源并不会创建)，当用户调用其失效方法(invalidate()方法)或超过其最大不活动时间时会失效。在会话有效期间，用户与服务器之间的多次请求都属于同一个会话。<br>————————————————<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_49092628/article/details/109287535">https://blog.csdn.net/weixin_49092628/article/details/109287535</a></p>
-<h2 id="5-1-标识符JSESSIONID"><a href="#5-1-标识符JSESSIONID" class="headerlink" title="5.1.标识符JSESSIONID"></a>5.1.标识符JSESSIONID</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>      <span class="token number">2.</span>JSESSIONID标识符
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210923153610785.png">一个项目下可以设置多个资源路径</p>
+<h2 id="5-HttpSession对象"><a href="#5-HttpSession对象" class="headerlink" title="5.HttpSession对象"></a>5.HttpSession对象</h2><p>​        HTTPSession是Java平台对session机制的实现规范，因为它仅仅是个接口，具体到每个web应用服务器的提供商，除了对规范支持之外，仍然会有一些规范里没有规定的细微差异。<br>HTTPSession对象将在用户第1次访问服务器时由容器创建(只有访问JSP、Servlet等程序时才会创建，只访问HTML、image等静态资源并不会创建)，当用户调用其失效方法(invalidate()方法)或超过其最大不活动时间时会失效。在会话有效期间，用户与服务器之间的多次请求都属于同一个会话。<br>————————————————<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_49092628/article/details/109287535">https://blog.csdn.net/weixin_49092628/article/details/109287535</a></p>
+<h3 id="5-1-标识符JSESSIONID"><a href="#5-1-标识符JSESSIONID" class="headerlink" title="5.1.标识符JSESSIONID"></a>5.1.标识符JSESSIONID</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>      <span class="token number">2.</span>JSESSIONID标识符
 <span class="token operator">*</span>          <span class="token number">2.1</span>当请求达到服务器时，如果使用了session，服务器回去获取一个JSESSIONID的cookie对象
 <span class="token operator">*</span>          <span class="token number">2.2</span>如果cookie对象不存在，则新建立session对象，并设置sessionId，将sessionId回传给客户端中，设置对应的cookie。
 <span class="token operator">*</span>             如果cookie对象存在，服务器会比较客户端传递的sessionId是否与服务端一致
@@ -788,7 +788,7 @@ System.out.println(&quot;会话创建时间：&quot; + session.getCreationTime()
 System.out.println(&quot;最后一次访问时间&quot; + session.getLastAccessedTime());
 System.out.println(&quot;是否是新的对象&quot; + session.isNew());<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="5-2-session域对象"><a href="#5-2-session域对象" class="headerlink" title="5.2.session域对象"></a>5.2.session域对象</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>      <span class="token number">3.</span>session作用域
+<h3 id="5-2-session域对象"><a href="#5-2-session域对象" class="headerlink" title="5.2.session域对象"></a>5.2.session域对象</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>      <span class="token number">3.</span>session作用域
 <span class="token operator">*</span>          再一次会话有效，可以有多次请求和响应，在会话中数据共享
 <span class="token operator">*</span>          <span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token operator">*</span>          <span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -812,9 +812,8 @@ session<span class="token punctuation">.</span><span class="token function">setA
 <span class="token comment">//重定向(两次请求->request不共享)</span>
 resp<span class="token punctuation">.</span><span class="token function">sendRedirect</span><span class="token punctuation">(</span><span class="token string">"se02"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924111412713.png" alt="image-20210924111412713" style="zoom:150%;" />
-
-<h2 id="5-3-session对象的销毁"><a href="#5-3-session对象的销毁" class="headerlink" title="5.3.session对象的销毁"></a>5.3.session对象的销毁</h2><p>​        当客户第一次请求servlet并且操作session时，session对象生成，Tomcat中session默认存活时间式神30min，即你不操作界面的时间，一旦有操作，session会重新计时</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211014002144048.png"></p>
+<h3 id="5-3-session对象的销毁"><a href="#5-3-session对象的销毁" class="headerlink" title="5.3.session对象的销毁"></a>5.3.session对象的销毁</h3><p>​        当客户第一次请求servlet并且操作session时，session对象生成，Tomcat中session默认存活时间式神30min，即你不操作界面的时间，一旦有操作，session会重新计时</p>
 <p>​        那么session的默认时间在哪里可以更改呢？</p>
 <p>​        -&gt;在Tomcat中的conf目录下的web.xml文件中可以进行修改，不建议修改</p>
 <!-- session默认最大不活动时间，单位：分钟 -->
@@ -843,15 +842,15 @@ session<span class="token punctuation">.</span><span class="token function">setM
 <span class="token comment">//手动销毁</span>
 session<span class="token punctuation">.</span><span class="token function">invalidate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924112816982.png" alt="image-20210924112816982"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924112816982.png"> </p>
 <p><strong>重定向后session不发生改变，SessionId保持一致</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924113030929.png" alt="image-20210924113030929"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924113030929.png"> </p>
 <p><strong>20秒后session失效，重定向到新页面创建新的SessionId，对比前后Session02的SessionId即可</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924113227570.png" alt="image-20210924113227570"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924113227570.png"> </p>
 <p><strong>设置session失效，所以重定向后两个页面的sessionId不一致</strong></p>
-<h1 id="6-ServletContext对象"><a href="#6-ServletContext对象" class="headerlink" title="6.ServletContext对象"></a>6.ServletContext对象</h1><p>​        每一个web应用有且只有一个ServletContext对象，又称Application对象，从名称中可以得知，该对象是与应用程序相关的。在WEB容器启动的时候，会为每一个WEB应用程序创建一个对应的ServletContext对象。</p>
+<h2 id="6-ServletContext对象"><a href="#6-ServletContext对象" class="headerlink" title="6.ServletContext对象"></a>6.ServletContext对象</h2><p>​        每一个web应用有且只有一个ServletContext对象，又称Application对象，从名称中可以得知，该对象是与应用程序相关的。在WEB容器启动的时候，会为每一个WEB应用程序创建一个对应的ServletContext对象。</p>
 <p>​        该对象有两大作用，第一：作为域对象用来共享数据，此时数据在整个应用程序中共享；第二：该对象保存了当前应用程序相关信息，例如可以通过getServerInfo()获取当前服务器信息，getRealPath(String path)获取资源的真实路径等。</p>
-<h2 id="6-1-ServletContext对象的获取"><a href="#6-1-ServletContext对象的获取" class="headerlink" title="6.1.ServletContext对象的获取"></a>6.1.ServletContext对象的获取</h2><p>​        获取ServletContext对象的途径有很多。比如：</p>
+<h3 id="6-1-ServletContext对象的获取"><a href="#6-1-ServletContext对象的获取" class="headerlink" title="6.1.ServletContext对象的获取"></a>6.1.ServletContext对象的获取</h3><p>​        获取ServletContext对象的途径有很多。比如：</p>
 <ul>
 <li>通过request 对象获取</li>
 </ul>
@@ -877,8 +876,8 @@ session<span class="token punctuation">.</span><span class="token function">inva
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"当前服务器的版本信息"</span> <span class="token operator">+</span> serverInfo<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924135524146.png" alt="image-20210924135524146"></p>
-<h2 id="6-2-ServletContext域对象"><a href="#6-2-ServletContext域对象" class="headerlink" title="6.2.ServletContext域对象"></a>6.2.ServletContext域对象</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/*
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924135524146.png"></p>
+<h3 id="6-2-ServletContext域对象"><a href="#6-2-ServletContext域对象" class="headerlink" title="6.2.ServletContext域对象"></a>6.2.ServletContext域对象</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/*
 * 作用域
 *      在这个应用程序中有效，只要服务器关闭就失效
 *       getAttribute
@@ -888,8 +887,8 @@ session<span class="token punctuation">.</span><span class="token function">inva
 
 
 
-<h1 id="7-文件上传和下载"><a href="#7-文件上传和下载" class="headerlink" title="7.文件上传和下载"></a>7.文件上传和下载</h1><p>​        在上网的时候我们常常会遇到文件上传的问题，例如上传头像，上传资料；当然除了上传，下载的情况也很多，接下来来看看我们Servlet中是怎么实现文件的上传和下载！</p>
-<h2 id="7-1-文件上传"><a href="#7-1-文件上传" class="headerlink" title="7.1.文件上传"></a>7.1.文件上传</h2><h3 id="7-1-1-前台页面"><a href="#7-1-1-前台页面" class="headerlink" title="7.1.1.前台页面"></a>7.1.1.前台页面</h3><p>​        在做文件上传的时候，会有一个上传文件的页面，首先我们需要一个表单，并且表单的请求方式为POST；其次我们的form表单的enctype必须设为”multipart/form-data”,即 <strong>enctype=”multipart/form-data”</strong>,意思是设置表单的类型为文件上传表单。默认情况下这个表单类型是”application/x-www-form-urlencoded”,不能用于文件上传。只有使用了multipart/form-data才可以完整的传输数据！</p>
+<h2 id="7-文件上传和下载"><a href="#7-文件上传和下载" class="headerlink" title="7.文件上传和下载"></a>7.文件上传和下载</h2><p>​        在上网的时候我们常常会遇到文件上传的问题，例如上传头像，上传资料；当然除了上传，下载的情况也很多，接下来来看看我们Servlet中是怎么实现文件的上传和下载！</p>
+<h3 id="7-1-文件上传"><a href="#7-1-文件上传" class="headerlink" title="7.1.文件上传"></a>7.1.文件上传</h3><h4 id="7-1-1-前台页面"><a href="#7-1-1-前台页面" class="headerlink" title="7.1.1.前台页面"></a>7.1.1.前台页面</h4><p>​        在做文件上传的时候，会有一个上传文件的页面，首先我们需要一个表单，并且表单的请求方式为POST；其次我们的form表单的enctype必须设为”multipart/form-data”,即 <strong>enctype=”multipart/form-data”</strong>,意思是设置表单的类型为文件上传表单。默认情况下这个表单类型是”application/x-www-form-urlencoded”,不能用于文件上传。只有使用了multipart/form-data才可以完整的传输数据！</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!--
 	文件上传表单
 		1.表单提交类型 method = "post"
@@ -905,7 +904,7 @@ session<span class="token punctuation">.</span><span class="token function">inva
 
 
 
-<h3 id="7-1-2-后台实现"><a href="#7-1-2-后台实现" class="headerlink" title="7.1.2.后台实现"></a>7.1.2.后台实现</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+<h4 id="7-1-2-后台实现"><a href="#7-1-2-后台实现" class="headerlink" title="7.1.2.后台实现"></a>7.1.2.后台实现</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * @author Lxy
  * @create 2021-09-24 14:33
  *
@@ -937,9 +936,9 @@ session<span class="token punctuation">.</span><span class="token function">inva
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>​        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924145634704.png" alt="image-20210924145634704"  /> </p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924145653564.png" alt="image-20210924145653564"> </p>
-<h2 id="7-2-文件下载"><a href="#7-2-文件下载" class="headerlink" title="7.2.文件下载"></a>7.2.文件下载</h2><p>​        文件下载，即将服务器上的资源下载（拷贝）到本地，我们可以通过两种方式下载。第一只是通过超链接本身的特性来下载；第二种是通过代码下载。</p>
-<h3 id="7-2-1-超链接下载"><a href="#7-2-1-超链接下载" class="headerlink" title="7.2.1.超链接下载"></a>7.2.1.超链接下载</h3><p>​        当我们在Html或者Jsp页面中使用a标签时，原意是希望能够进行跳转，但当超链接遇到浏览器不识别的资源时也会自动下载；当遇到浏览器能够直接显示的资源，浏览器会默认显示出来，不如txt，png，jpg等。当然我们也可以通过<strong>download属性</strong>规定浏览器进行下载。但有些浏览器不支持。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924145653564.png"> </p>
+<h3 id="7-2-文件下载"><a href="#7-2-文件下载" class="headerlink" title="7.2.文件下载"></a>7.2.文件下载</h3><p>​        文件下载，即将服务器上的资源下载（拷贝）到本地，我们可以通过两种方式下载。第一只是通过超链接本身的特性来下载；第二种是通过代码下载。</p>
+<h4 id="7-2-1-超链接下载"><a href="#7-2-1-超链接下载" class="headerlink" title="7.2.1.超链接下载"></a>7.2.1.超链接下载</h4><p>​        当我们在Html或者Jsp页面中使用a标签时，原意是希望能够进行跳转，但当超链接遇到浏览器不识别的资源时也会自动下载；当遇到浏览器能够直接显示的资源，浏览器会默认显示出来，不如txt，png，jpg等。当然我们也可以通过<strong>download属性</strong>规定浏览器进行下载。但有些浏览器不支持。</p>
 <p>​        <strong>默认下载：</strong></p>
 <pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;h2&gt;超链接下载&lt;&#x2F;h2&gt;
 &lt;h4&gt;浏览器可以识别的资源&lt;&#x2F;h4&gt;
@@ -959,7 +958,7 @@ session<span class="token punctuation">.</span><span class="token function">inva
 
 <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924152501024.png" alt="image-20210924152501024" style="zoom:80%;" /> 点击Html文件</p>
 <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924152550593.png" alt="image-20210924152550593" style="zoom: 80%;" /> 点击下载链接</p>
-<h3 id="7-2-2-后台实现下载"><a href="#7-2-2-后台实现下载" class="headerlink" title="7.2.2.后台实现下载"></a>7.2.2.后台实现下载</h3><p>​        <strong>实现步骤</strong></p>
+<h4 id="7-2-2-后台实现下载"><a href="#7-2-2-后台实现下载" class="headerlink" title="7.2.2.后台实现下载"></a>7.2.2.后台实现下载</h4><p>​        <strong>实现步骤</strong></p>
 <pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;form action&#x3D;&quot;downloadServlet&quot;&gt;
     文件名:&lt;input type&#x3D;&quot;text&quot;name&#x3D;&quot;filename&quot;&gt;
     &lt;button type&#x3D;&quot;submit&quot;&gt;下载&lt;&#x2F;button&gt;
@@ -1013,8 +1012,8 @@ session<span class="token punctuation">.</span><span class="token function">inva
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210925145311713.png" alt="image-20210925145311713"> 后台下载会在服务器内部找到对应文件，找得到则跳出下载提示框！！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210925145144128.png" alt="image-20210925145144128"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210925145311713.png"> 后台下载会在服务器内部找到对应文件，找得到则跳出下载提示框！！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210925145144128.png"></p>
 
                 
             </div>
