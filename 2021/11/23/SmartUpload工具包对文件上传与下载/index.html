@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MVC的Demo, Sta.了啦">
+    <meta name="keywords" content="SmartUpload工具包对文件上传与下载, Sta.了啦">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MVC的Demo | Sta.了啦</title>
+    <title>SmartUpload工具包对文件上传与下载 | Sta.了啦</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -322,12 +322,12 @@ color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121162532008.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211123114234523.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MVC的Demo</h1>
+                    <h1 class="description center-align post-title">SmartUpload工具包对文件上传与下载</h1>
                 </div>
             </div>
         </div>
@@ -446,8 +446,12 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/MVC/">
-                                <span class="chip bg-color">MVC</span>
+                            <a href="/tags/smartupload-jar/">
+                                <span class="chip bg-color">smartupload.jar</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/">
+                                <span class="chip bg-color">文件上传下载</span>
                             </a>
                         
                     </div>
@@ -471,28 +475,28 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-21
+                    2021-11-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-21
+                    2021-11-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    653
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    3 分
                 </div>
                 
 
@@ -515,246 +519,112 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121162532008.png"> </p>
-<h1 id="MVC的简单demo"><a href="#MVC的简单demo" class="headerlink" title="MVC的简单demo"></a>MVC的简单demo</h1><h2 id="简单了解MVC"><a href="#简单了解MVC" class="headerlink" title="简单了解MVC"></a>简单了解MVC</h2><p>M：(Model) 模型 : 应⽤程序的核⼼功能，管理这个模块中⽤的数据和值（bean,dao）；</p>
-<p>V(View )视图: 视图提供模型的展示，管理模型如何显示给⽤户，它是应⽤程序的外观；（jsp/html）</p>
-<p>C(Controller)控制器: 对⽤户的输⼊做出反应，管理⽤户和视图的交互，是连接模型和视图的枢纽。</p>
-<p>（servlet/service）</p>
-<p>MVC⽤于将web（UI）层进⾏职责解耦</p>
-<p><strong>说明:mvc设计模式(不属于23种设计模式)</strong></p>
-<h2 id="这里我不打算写一些理论知识直接上代码咯"><a href="#这里我不打算写一些理论知识直接上代码咯" class="headerlink" title="这里我不打算写一些理论知识直接上代码咯"></a>这里我不打算写一些理论知识直接上代码咯</h2><h3 id="一、分层（包含M和C）"><a href="#一、分层（包含M和C）" class="headerlink" title="一、分层（包含M和C）"></a>一、分层（包含M和C）</h3><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121155442696.png"> </p>
-<h4 id="1-bean"><a href="#1-bean" class="headerlink" title="1.bean"></a>1.bean</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//实体类包主要存放于数据库对应的实体类</span>
-<span class="token comment">//类名=表名</span>
-<span class="token comment">//属性名=列名</span>
-<span class="token comment">//实体类需要包含：属性，构造（无参，全参），getter，setter</span>
-<span class="token comment">//属于Model（M）</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student1</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">private</span> <span class="token class-name">Integer</span> stuid<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token class-name">String</span> stuname<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token class-name">Integer</span> age<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token class-name">Integer</span> sex<span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token class-name">Student1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token punctuation">&#125;</span>
+                <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211123114234523.png"></p>
+<h1 id="SmartUpload-jar实现文件上传"><a href="#SmartUpload-jar实现文件上传" class="headerlink" title="SmartUpload.jar实现文件上传"></a>SmartUpload.jar实现文件上传</h1><h2 id="1-将jar包添加到项目中-smartupload-jar"><a href="#1-将jar包添加到项目中-smartupload-jar" class="headerlink" title="1.将jar包添加到项目中:smartupload.jar"></a>1.将jar包添加到项目中:smartupload.jar</h2><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211123111702797.png"> </p>
+<h2 id="2-准备上传的页面"><a href="#2-准备上传的页面" class="headerlink" title="2.准备上传的页面"></a>2.准备上传的页面</h2><pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;!--FileUpload.jsp--&gt;
+&lt;form action&#x3D;&quot;uploadtest&quot; method&#x3D;&quot;post&quot; enctype&#x3D;&quot;multipart&#x2F;form-data&quot;&gt;
+    姓名: &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;uname&quot;&gt;&lt;br&gt;
+    图片: &lt;input type&#x3D;&quot;file&quot; name&#x3D;&quot;pic&quot;&gt;&lt;br&gt;
+    &lt;input type&#x3D;&quot;submit&quot; value&#x3D;&quot;上传&quot;&gt;
+&lt;&#x2F;form&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>注:</strong></p>
+<p>(1)form标签中要添加enctype属性 </p>
+<p>(2)提交方式必须是post</p>
+<h2 id="3-开始获取数据-保存文件"><a href="#3-开始获取数据-保存文件" class="headerlink" title="3.开始获取数据,保存文件"></a>3.开始获取数据,保存文件</h2><p><strong>实例代码</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@WebServlet</span><span class="token punctuation">(</span>urlPatterns <span class="token operator">=</span> <span class="token string">"/uploadtest"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UploadServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">&#123;</span>
 
-    <span class="token keyword">public</span> <span class="token class-name">Integer</span> <span class="token function">getStuid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> stuid<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setStuid</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> stuid<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>stuid <span class="token operator">=</span> stuid<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getStuname</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> stuname<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setStuname</span><span class="token punctuation">(</span><span class="token class-name">String</span> stuname<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>stuname <span class="token operator">=</span> stuname<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token class-name">Integer</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> age<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> age<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token class-name">Integer</span> <span class="token function">getSex</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> sex<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setSex</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> sex<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>sex <span class="token operator">=</span> sex<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="2-dao"><a href="#2-dao" class="headerlink" title="2.dao"></a>2.dao</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121155735864.png"> </p>
-<h5 id="2-1接口"><a href="#2-1接口" class="headerlink" title="2.1接口"></a>2.1接口</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//实体类+Dao=当前接口名</span>
-<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">StudentDao</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">//定义操作数据库的方法</span>
-    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student1</span><span class="token punctuation">></span></span> <span class="token function">getAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">SQLException</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="2-2实现类"><a href="#2-2实现类" class="headerlink" title="2.2实现类"></a>2.2实现类</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//接口名+Impl=当前类名</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentDaoImpl</span> <span class="token keyword">extends</span> <span class="token class-name">DruidUtil</span> <span class="token keyword">implements</span> <span class="token class-name">StudentDao</span> <span class="token punctuation">&#123;</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student1</span><span class="token punctuation">></span></span> <span class="token function">getAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token class-name">List</span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">Connection</span> connection <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-        <span class="token class-name">PreparedStatement</span> pps <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-        <span class="token class-name">ResultSet</span> resultSet <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
-            connection <span class="token operator">=</span> <span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            pps <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span><span class="token string">"select * from student1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            resultSet <span class="token operator">=</span> pps<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">while</span> <span class="token punctuation">(</span>resultSet<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-                <span class="token class-name">Student1</span> student <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                student<span class="token punctuation">.</span><span class="token function">setStuid</span><span class="token punctuation">(</span>resultSet<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">"stuid"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                student<span class="token punctuation">.</span><span class="token function">setStuname</span><span class="token punctuation">(</span>resultSet<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"stuname"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                student<span class="token punctuation">.</span><span class="token function">setAge</span><span class="token punctuation">(</span>resultSet<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">"age"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                student<span class="token punctuation">.</span><span class="token function">setSex</span><span class="token punctuation">(</span>resultSet<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">"sex"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">&#125;</span>
-        <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">SQLException</span> throwables<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            throwables<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span> <span class="token keyword">finally</span> <span class="token punctuation">&#123;</span>
-            <span class="token function">close</span><span class="token punctuation">(</span>connection<span class="token punctuation">,</span>pps<span class="token punctuation">,</span>resultSet<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-
-        <span class="token keyword">return</span> list<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="3-service"><a href="#3-service" class="headerlink" title="3.service"></a>3.service</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121155830655.png"> </p>
-<h5 id="3-1接口"><a href="#3-1接口" class="headerlink" title="3.1接口"></a>3.1接口</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//bean类名+Service=当前类名</span>
-<span class="token comment">//service层主要定义业务逻辑，现阶段主要调取dao层</span>
-<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">StudentService</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">//查询全部</span>
-    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student1</span><span class="token punctuation">></span></span> <span class="token function">getAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">SQLException</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="3-2实现类"><a href="#3-2实现类" class="headerlink" title="3.2实现类"></a>3.2实现类</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentServiceImpl</span> <span class="token keyword">implements</span> <span class="token class-name">StudentService</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">private</span> <span class="token class-name">StudentDao</span> studentDao <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StudentDaoImpl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student1</span><span class="token punctuation">></span></span> <span class="token function">getAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">SQLException</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> studentDao<span class="token punctuation">.</span><span class="token function">getAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="4-servlet"><a href="#4-servlet" class="headerlink" title="4.servlet"></a>4.servlet</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//C-->Controller 控制层</span>
-
-<span class="token annotation punctuation">@WebServlet</span><span class="token punctuation">(</span>urlPatterns <span class="token operator">=</span> <span class="token string">"/getstus"</span><span class="token punctuation">)</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">&#123;</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doGet</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> req<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> resp<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
-        <span class="token comment">//即使是get请求也会执行post</span>
         <span class="token function">doPost</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doPost</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> req<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> resp<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
-        <span class="token comment">//1.接收请求参数</span>
-
-        <span class="token comment">//2.调取service层方法</span>
-        <span class="token class-name">StudentService</span> studentService <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StudentServiceImpl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student1</span><span class="token punctuation">></span></span> stulist <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
         <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
-            stulist <span class="token operator">=</span> studentService<span class="token punctuation">.</span><span class="token function">getAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">SQLException</span> throwables<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            throwables<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
+            <span class="token comment">//1.创建上传文件的操作对象</span>
+            <span class="token class-name">SmartUpload</span> smartUpload <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SmartUpload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        <span class="token comment">//3.跳转页面</span>
-        <span class="token comment">//后台传递数据给前台</span>
-        req<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"stulist"</span><span class="token punctuation">,</span>stulist<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        req<span class="token punctuation">.</span><span class="token function">getRequestDispatcher</span><span class="token punctuation">(</span><span class="token string">"/show.jsp"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+            <span class="token comment">//2.初始化上传操作</span>
+            <span class="token class-name">PageContext</span> pageContext <span class="token operator">=</span> <span class="token class-name">JspFactory</span><span class="token punctuation">.</span><span class="token function">getDefaultFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>getPageContext
+                    <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> req<span class="token punctuation">,</span> resp<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            smartUpload<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span>pageContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
+            <span class="token comment">//2.1设置编码</span>
+            smartUpload<span class="token punctuation">.</span><span class="token function">setCharset</span><span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
+            <span class="token comment">//3.上传</span>
+            smartUpload<span class="token punctuation">.</span><span class="token function">upload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<h4 id="5-util-连接数据库的工具包"><a href="#5-util-连接数据库的工具包" class="headerlink" title="5.util(连接数据库的工具包)"></a>5.util(连接数据库的工具包)</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DruidUtil</span> <span class="token punctuation">&#123;</span>
+            <span class="token comment">//4.获取文件信息</span>
+            <span class="token class-name">File</span> file <span class="token operator">=</span> smartUpload<span class="token punctuation">.</span><span class="token function">getFiles</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFile</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">String</span> fileName <span class="token operator">=</span> file<span class="token punctuation">.</span><span class="token function">getFileName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">String</span> contentType <span class="token operator">=</span> file<span class="token punctuation">.</span><span class="token function">getContentType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">DataSource</span> ds<span class="token punctuation">;</span>
+            <span class="token comment">//获取文本信息</span>
+            <span class="token class-name">String</span> uname <span class="token operator">=</span> smartUpload<span class="token punctuation">.</span><span class="token function">getRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"uname"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"uname="</span> <span class="token operator">+</span> uname<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">static</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
-            <span class="token class-name">Properties</span> ppt <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            ppt<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token class-name">DruidUtil</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getResourceAsStream</span><span class="token punctuation">(</span><span class="token string">"druid.properties"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            ds <span class="token operator">=</span> <span class="token class-name">DruidDataSourceFactory</span><span class="token punctuation">.</span><span class="token function">createDataSource</span><span class="token punctuation">(</span>ppt<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token comment">//5.指定上传路径</span>
+            <span class="token class-name">String</span> uploadpath <span class="token operator">=</span> <span class="token string">"/uploadfiles/"</span><span class="token operator">+</span>fileName<span class="token punctuation">;</span>
+
+            <span class="token comment">//6.保存到指定位置</span>
+            file<span class="token punctuation">.</span><span class="token function">saveAs</span><span class="token punctuation">(</span>uploadpath<span class="token punctuation">,</span><span class="token class-name">File</span><span class="token punctuation">.</span>SAVEAS_VIRTUAL<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">//7.跳转到成功页面</span>
+            req<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"filename"</span><span class="token punctuation">,</span>fileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            req<span class="token punctuation">.</span><span class="token function">getRequestDispatcher</span><span class="token punctuation">(</span><span class="token string">"success.jsp"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">SmartUploadException</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
             e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-    <span class="token comment">/**
-     * 从连接池中取出一个连接给用户
-     * @return
-     */</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Connection</span> <span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
-            <span class="token keyword">return</span> ds<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">SQLException</span> throwables<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            throwables<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+<p><strong>注：</strong></p>
+<p>（1)此时如果表单中有其他数据时，不能通过request直接获取，需要通过SmartUpload对象获取<br> String name=su.getRequest().getParameter(“bookName”);<br> 并且该代码要在SmartUpload操作完成后添加<br> (2)解决乱码:<br> new String(name.getBytes(“GBK”),”utf-8”)</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//内置参数按顺序含义如下图</span>
+<span class="token class-name">PageContext</span> pageContext <span class="token operator">=</span> <span class="token class-name">JspFactory</span><span class="token punctuation">.</span><span class="token function">getDefaultFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>getPageContext
+<span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> req<span class="token punctuation">,</span> resp<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token class-name">Connection</span> conn<span class="token punctuation">,</span> <span class="token class-name">Statement</span> state<span class="token punctuation">,</span> <span class="token class-name">ResultSet</span> rs<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
-            rs<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> throwables<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            throwables<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
-            state<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> throwables<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            throwables<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
-            conn<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> throwables<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            throwables<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="5-1配置文件"><a href="#5-1配置文件" class="headerlink" title="5.1配置文件"></a>5.1配置文件</h5><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160155870.png"> </p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">url<span class="token operator">=</span>jdbc<span class="token operator">:</span>mysql<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token operator">:</span><span class="token number">3306</span><span class="token operator">/</span>javaweb<span class="token operator">?</span>useUnicode<span class="token operator">=</span><span class="token boolean">true</span><span class="token operator">&amp;</span>characterEncoding<span class="token operator">=</span>utf<span class="token operator">-</span><span class="token number">8</span><span class="token operator">&amp;</span>serverTimezone<span class="token operator">=</span><span class="token class-name">UTC</span>
-username<span class="token operator">=</span>root
-password<span class="token operator">=</span>lxy18750112980
-driverClassName<span class="token operator">=</span><span class="token class-name"><span class="token namespace">com<span class="token punctuation">.</span>mysql<span class="token punctuation">.</span>cj<span class="token punctuation">.</span>jdbc<span class="token punctuation">.</span></span>Driver</span>
-initialSize<span class="token operator">=</span><span class="token number">5</span>
-maxActive<span class="token operator">=</span><span class="token number">10</span>
-minIdle<span class="token operator">=</span><span class="token number">5</span>
-maxWait<span class="token operator">=</span><span class="token number">3000</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="二、V的部分"><a href="#二、V的部分" class="headerlink" title="二、V的部分"></a>二、V的部分</h3><h4 id="1-导包"><a href="#1-导包" class="headerlink" title="1.导包"></a>1.导包</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160408647.png"> </p>
-<h4 id="2-index-jsp"><a href="#2-index-jsp" class="headerlink" title="2.index.jsp"></a>2.index.jsp</h4><pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;%@ page contentType&#x3D;&quot;text&#x2F;html;charset&#x3D;UTF-8&quot; language&#x3D;&quot;java&quot; %&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;$Title$&lt;&#x2F;title&gt;
-  &lt;&#x2F;head&gt;
-  &lt;body&gt;
-  &lt;a href&#x3D;&quot;&#x2F;getstus&quot;&gt;查询学生列表&lt;&#x2F;a&gt;
-  &lt;&#x2F;body&gt;
-&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="3-show-jsp"><a href="#3-show-jsp" class="headerlink" title="3.show.jsp"></a>3.show.jsp</h4><pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;%@ page contentType&#x3D;&quot;text&#x2F;html;charset&#x3D;UTF-8&quot; language&#x3D;&quot;java&quot; %&gt;
-&lt;%@taglib prefix&#x3D;&quot;c&quot; uri&#x3D;&quot;http:&#x2F;&#x2F;java.sun.com&#x2F;jsp&#x2F;jstl&#x2F;core&quot; %&gt;
-
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Title&lt;&#x2F;title&gt;
-&lt;&#x2F;head&gt;
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211123112247453.png"></p>
+<h1 id="SmartUpload-jar实现文件下载"><a href="#SmartUpload-jar实现文件下载" class="headerlink" title="SmartUpload.jar实现文件下载"></a>SmartUpload.jar实现文件下载</h1><h2 id="1-下载页面"><a href="#1-下载页面" class="headerlink" title="1.下载页面"></a>1.下载页面</h2><pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;!--success.jsp--&gt;
 &lt;body&gt;
-    &lt;h1&gt;show.jsp&lt;&#x2F;h1&gt;
-    &lt;table border&#x3D;&quot;1&quot; width&#x3D;&quot;500px&quot; bgcolor&#x3D;&quot;aqua&quot;&gt;
-        &lt;tr&gt;
-            &lt;td&gt;id&lt;&#x2F;td&gt;
-            &lt;td&gt;name&lt;&#x2F;td&gt;
-            &lt;td&gt;age&lt;&#x2F;td&gt;
-            &lt;td&gt;sex&lt;&#x2F;td&gt;
-        &lt;&#x2F;tr&gt;
-    &lt;c:forEach items&#x3D;&quot;$&#123;requestScope.stulist&#125;&quot; var&#x3D;&quot;stu&quot;&gt;
-        &lt;tr&gt;
-            &lt;td&gt;$&#123;stu.stuid&#125;&lt;&#x2F;td&gt;
-            &lt;td&gt;$&#123;stu.stuname&#125;&lt;&#x2F;td&gt;
-            &lt;td&gt;$&#123;stu.age&#125;&lt;&#x2F;td&gt;
-            &lt;td&gt;$&#123;stu.sex&#x3D;&#x3D;1?&#39;男&#39;:&#39;女&#39;&#125;&lt;&#x2F;td&gt;
-        &lt;&#x2F;tr&gt;
-    &lt;&#x2F;c:forEach&gt;
-    &lt;&#x2F;table&gt;
-&lt;&#x2F;body&gt;
-&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  &lt;h1&gt;success.jsp&lt;&#x2F;h1&gt;
 
-<h3 id="三、数据库"><a href="#三、数据库" class="headerlink" title="三、数据库"></a>三、数据库</h3><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160705836.png"> </p>
-<h3 id="四、样例展示"><a href="#四、样例展示" class="headerlink" title="四、样例展示"></a>四、样例展示</h3><h4 id="1-直接访问show-jsp"><a href="#1-直接访问show-jsp" class="headerlink" title="1.直接访问show.jsp"></a>1.直接访问show.jsp</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160922344.png"> </p>
-<h4 id="2-index-jsp-1"><a href="#2-index-jsp-1" class="headerlink" title="2.index.jsp"></a>2.index.jsp</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160938416.png"> </p>
-<h4 id="3-通过点击index-jsp内超链接访问show-jsp"><a href="#3-通过点击index-jsp内超链接访问show-jsp" class="headerlink" title="3.通过点击index.jsp内超链接访问show.jsp"></a>3.通过点击index.jsp内超链接访问show.jsp</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160957029.png"> </p>
+  &lt;a href&#x3D;&quot;downimg?filename&#x3D;$&#123;filename&#125;&quot;&gt;下载&lt;&#x2F;a&gt;
+  &lt;img src&#x3D;&quot;uploadfiles&#x2F;$&#123;filename&#125;&quot; alt&#x3D;&quot;&quot;&gt;
+
+&lt;&#x2F;body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2-服务器代码"><a href="#2-服务器代码" class="headerlink" title="2.服务器代码"></a>2.服务器代码</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@WebServlet</span><span class="token punctuation">(</span>urlPatterns <span class="token operator">=</span> <span class="token string">"/downimg"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DownServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doGet</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> req<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> resp<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">doPost</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doPost</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> req<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> resp<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">String</span> filename <span class="token operator">=</span> req<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"filename"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> path <span class="token operator">=</span> <span class="token string">"/uploadfiles/"</span><span class="token operator">+</span>filename<span class="token punctuation">;</span>
+
+        <span class="token comment">//设置响应头和响应类型</span>
+        resp<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"application/octet-stream"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//表示返回过来的是一个流</span>
+
+        <span class="token comment">//attachment 告诉浏览器以附件的方式下载文件(弹出下载框)</span>
+        resp<span class="token punctuation">.</span><span class="token function">addHeader</span><span class="token punctuation">(</span><span class="token string">"Content-Disposition"</span><span class="token punctuation">,</span><span class="token string">"attachment;filename="</span><span class="token operator">+</span> <span class="token class-name">URLEncoder</span><span class="token punctuation">.</span><span class="token function">encode</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//跳转页面</span>
+        req<span class="token punctuation">.</span><span class="token function">getRequestDispatcher</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//清空缓冲区:将服务端缓冲区的文件内容,立即权并不传送给客户端</span>
+        resp<span class="token punctuation">.</span><span class="token function">flushBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="上传下载上述实例展示"><a href="#上传下载上述实例展示" class="headerlink" title="上传下载上述实例展示"></a>上传下载上述实例展示</h1><h2 id="1-上传"><a href="#1-上传" class="headerlink" title="1.上传"></a>1.上传</h2><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211123113031893.png"></p>
+<h2 id="2展示并下载"><a href="#2展示并下载" class="headerlink" title="2展示并下载"></a>2展示并下载</h2><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211123113213331.png"></p>
 
                 
             </div>
@@ -781,7 +651,7 @@ maxWait<span class="token operator">=</span><span class="token number">3000</spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lxy197120.github.io/2021/11/21/MVC%E7%9A%84Demo/">https://lxy197120.github.io/2021/11/21/MVC%E7%9A%84Demo/</a>
+                    <a href="https://lxy197120.github.io/2021/11/23/SmartUpload%E5%B7%A5%E5%85%B7%E5%8C%85%E5%AF%B9%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%8E%E4%B8%8B%E8%BD%BD/">https://lxy197120.github.io/2021/11/23/SmartUpload%E5%B7%A5%E5%85%B7%E5%8C%85%E5%AF%B9%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%8E%E4%B8%8B%E8%BD%BD/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -819,8 +689,12 @@ maxWait<span class="token operator">=</span><span class="token number">3000</spa
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/MVC/">
-                                    <span class="chip bg-color">MVC</span>
+                                <a href="/tags/smartupload-jar/">
+                                    <span class="chip bg-color">smartupload.jar</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/">
+                                    <span class="chip bg-color">文件上传下载</span>
                                 </a>
                             
                         </div>
@@ -1315,9 +1189,10 @@ new Valine({
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/11/23/SmartUpload%E5%B7%A5%E5%85%B7%E5%8C%85%E5%AF%B9%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%8E%E4%B8%8B%E8%BD%BD/">
                     <div class="card-image">
@@ -1334,9 +1209,9 @@ new Valine({
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1349,6 +1224,7 @@ new Valine({
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1371,18 +1247,18 @@ new Valine({
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/21/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E5%92%8C%E8%BF%87%E6%BB%A4%E5%99%A8%E6%8B%A6%E6%88%AA%E5%99%A8/">
+                <a href="/2021/11/21/MVC%E7%9A%84Demo/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121161816512.png" class="responsive-img" alt="会话跟踪和过滤器拦截器">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121162532008.png" class="responsive-img" alt="MVC的Demo">
                         
-                        <span class="card-title">会话跟踪和过滤器拦截器</span>
+                        <span class="card-title">MVC的Demo</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于Servlet的必备知识，确定不来看看？
+                            基于后端开发MVC模式的小例子，可以很好帮助你理解MVC的含义
                         
                     </div>
                     <div class="publish-info">
@@ -1404,24 +1280,8 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Servlet/">
-                        <span class="chip bg-color">Servlet</span>
-                    </a>
-                    
-                    <a href="/tags/Cookie/">
-                        <span class="chip bg-color">Cookie</span>
-                    </a>
-                    
-                    <a href="/tags/Session/">
-                        <span class="chip bg-color">Session</span>
-                    </a>
-                    
-                    <a href="/tags/Filter/">
-                        <span class="chip bg-color">Filter</span>
-                    </a>
-                    
-                    <a href="/tags/Listener/">
-                        <span class="chip bg-color">Listener</span>
+                    <a href="/tags/MVC/">
+                        <span class="chip bg-color">MVC</span>
                     </a>
                     
                 </div>
