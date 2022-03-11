@@ -245,7 +245,7 @@ mark {
 
 .bg-color {
     background-image: linear-gradient(to right, #6DD0F2 0%, #F59ABE 100%);
-    opacity: 0.8;  /*透明效果 值范围 0~1，看情况自己修改*/
+    opacity: 0.7;  /*透明效果 值范围 0~1，看情况自己修改*/
 }
 
 .text-color {
@@ -2161,3 +2161,6 @@ p.search-result-summary{
     width: 8px;
     height: 15px;
 }
+
+/*设置头像旋转*/ 
+.frind-ship .title img { object-fit: contain; transition: all 1s; } .friend-div:hover .title img { transform: rotate(360deg); -ms-transform: rotate(360deg); -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); }
