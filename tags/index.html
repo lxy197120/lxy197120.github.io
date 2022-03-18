@@ -193,8 +193,6 @@ color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
                     <span class="logo-span">Sta.了啦</span>
                 </a>
             </div>
@@ -280,6 +278,17 @@ color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/navigate" class="waves-effect waves-light">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>导航</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -291,8 +300,6 @@ color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
 <div id="mobile-nav" class="side-nav sidenav">
 
     <div class="mobile-head bg-color">
-        
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Sta.了啦</div>
         <div class="logo-desc">
@@ -379,6 +386,17 @@ color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
 			    <i class="fa-fw fas fa-address-book"></i>
 			
 			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/navigate" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			导航
 		</a>
           
         </li>
@@ -645,15 +663,6 @@ color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
                 </a>
                 
                 
-                <a href="/tags/MVC/" title="MVC: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="MVC" style="background-color: #FEF9E7;">MVC
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/Redis%E5%AE%89%E8%A3%85/" title="Redis安装: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
@@ -672,10 +681,28 @@ color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
                 </a>
                 
                 
+                <a href="/tags/MVC/" title="MVC: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="MVC" style="background-color: #FEF9E7;">MVC
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/Maven%E5%9F%BA%E7%A1%80/" title="Maven基础: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="Maven基础" style="background-color: #FEF9E7;">Maven基础
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Maven%E9%85%8D%E7%BD%AE/" title="Maven配置: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Maven配置" style="background-color: #85C1E9;">Maven配置
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -690,10 +717,10 @@ color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
                 </a>
                 
                 
-                <a href="/tags/Maven%E9%85%8D%E7%BD%AE/" title="Maven配置: 1">
+                <a href="/tags/Redis%E4%BB%8B%E7%BB%8D/" title="Redis介绍: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Maven配置" style="background-color: #85C1E9;">Maven配置
+                            data-tagname="Redis介绍" style="background-color: #F8F9F9;">Redis介绍
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -712,15 +739,6 @@ color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="SQL" style="background-color: #A3E4D7;">SQL
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Redis%E4%BB%8B%E7%BB%8D/" title="Redis介绍: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Redis介绍" style="background-color: #F8F9F9;">Redis介绍
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -947,7 +965,7 @@ color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"IO","weight":1,"link":"/tags/IO/"},{"text":"InputStream","weight":1,"link":"/tags/InputStream/"},{"text":"OutStream","weight":1,"link":"/tags/OutStream/"},{"text":"Reader","weight":1,"link":"/tags/Reader/"},{"text":"Writer","weight":1,"link":"/tags/Writer/"},{"text":"反射","weight":1,"link":"/tags/反射/"},{"text":"多线程","weight":1,"link":"/tags/多线程/"},{"text":"Thread","weight":1,"link":"/tags/Thread/"},{"text":"Runnable","weight":1,"link":"/tags/Runnable/"},{"text":"java集合","weight":1,"link":"/tags/java集合/"},{"text":"Collection","weight":1,"link":"/tags/Collection/"},{"text":"Map","weight":1,"link":"/tags/Map/"},{"text":"Iterator","weight":1,"link":"/tags/Iterator/"},{"text":"集合面试题","weight":1,"link":"/tags/集合面试题/"},{"text":"MVC","weight":1,"link":"/tags/MVC/"},{"text":"Redis安装","weight":1,"link":"/tags/Redis安装/"},{"text":"Linux下的Redis配置","weight":1,"link":"/tags/Linux下的Redis配置/"},{"text":"Maven基础","weight":1,"link":"/tags/Maven基础/"},{"text":"Maven搭建javaweb","weight":1,"link":"/tags/Maven搭建javaweb/"},{"text":"Maven配置","weight":1,"link":"/tags/Maven配置/"},{"text":"Oracle","weight":1,"link":"/tags/Oracle/"},{"text":"SQL","weight":1,"link":"/tags/SQL/"},{"text":"Redis介绍","weight":1,"link":"/tags/Redis介绍/"},{"text":"Redis的几种数据结构","weight":1,"link":"/tags/Redis的几种数据结构/"},{"text":"smartupload.jar","weight":1,"link":"/tags/smartupload-jar/"},{"text":"文件上传下载","weight":1,"link":"/tags/文件上传下载/"},{"text":"xml","weight":1,"link":"/tags/xml/"},{"text":"json","weight":2,"link":"/tags/json/"},{"text":"Hexo","weight":1,"link":"/tags/Hexo/"},{"text":"java常用类库","weight":1,"link":"/tags/java常用类库/"},{"text":"Arrays","weight":1,"link":"/tags/Arrays/"},{"text":"Date","weight":1,"link":"/tags/Date/"},{"text":"DateFormat","weight":1,"link":"/tags/DateFormat/"},{"text":"markdown","weight":1,"link":"/tags/markdown/"},{"text":"Ajax","weight":1,"link":"/tags/Ajax/"},{"text":"Tomcat","weight":1,"link":"/tags/Tomcat/"},{"text":"Servlet","weight":2,"link":"/tags/Servlet/"},{"text":"Cookie","weight":2,"link":"/tags/Cookie/"},{"text":"Session","weight":2,"link":"/tags/Session/"},{"text":"jsp","weight":1,"link":"/tags/jsp/"},{"text":"jstl","weight":1,"link":"/tags/jstl/"},{"text":"el表达式","weight":1,"link":"/tags/el表达式/"},{"text":"Redis","weight":1,"link":"/tags/Redis/"},{"text":"Filter","weight":1,"link":"/tags/Filter/"},{"text":"Listener","weight":1,"link":"/tags/Listener/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"IO","weight":1,"link":"/tags/IO/"},{"text":"InputStream","weight":1,"link":"/tags/InputStream/"},{"text":"OutStream","weight":1,"link":"/tags/OutStream/"},{"text":"Reader","weight":1,"link":"/tags/Reader/"},{"text":"Writer","weight":1,"link":"/tags/Writer/"},{"text":"反射","weight":1,"link":"/tags/反射/"},{"text":"多线程","weight":1,"link":"/tags/多线程/"},{"text":"Thread","weight":1,"link":"/tags/Thread/"},{"text":"Runnable","weight":1,"link":"/tags/Runnable/"},{"text":"java集合","weight":1,"link":"/tags/java集合/"},{"text":"Collection","weight":1,"link":"/tags/Collection/"},{"text":"Map","weight":1,"link":"/tags/Map/"},{"text":"Iterator","weight":1,"link":"/tags/Iterator/"},{"text":"集合面试题","weight":1,"link":"/tags/集合面试题/"},{"text":"Redis安装","weight":1,"link":"/tags/Redis安装/"},{"text":"Linux下的Redis配置","weight":1,"link":"/tags/Linux下的Redis配置/"},{"text":"MVC","weight":1,"link":"/tags/MVC/"},{"text":"Maven基础","weight":1,"link":"/tags/Maven基础/"},{"text":"Maven配置","weight":1,"link":"/tags/Maven配置/"},{"text":"Maven搭建javaweb","weight":1,"link":"/tags/Maven搭建javaweb/"},{"text":"Redis介绍","weight":1,"link":"/tags/Redis介绍/"},{"text":"Oracle","weight":1,"link":"/tags/Oracle/"},{"text":"SQL","weight":1,"link":"/tags/SQL/"},{"text":"Redis的几种数据结构","weight":1,"link":"/tags/Redis的几种数据结构/"},{"text":"smartupload.jar","weight":1,"link":"/tags/smartupload-jar/"},{"text":"文件上传下载","weight":1,"link":"/tags/文件上传下载/"},{"text":"xml","weight":1,"link":"/tags/xml/"},{"text":"json","weight":2,"link":"/tags/json/"},{"text":"Hexo","weight":1,"link":"/tags/Hexo/"},{"text":"java常用类库","weight":1,"link":"/tags/java常用类库/"},{"text":"Arrays","weight":1,"link":"/tags/Arrays/"},{"text":"Date","weight":1,"link":"/tags/Date/"},{"text":"DateFormat","weight":1,"link":"/tags/DateFormat/"},{"text":"markdown","weight":1,"link":"/tags/markdown/"},{"text":"Ajax","weight":1,"link":"/tags/Ajax/"},{"text":"Tomcat","weight":1,"link":"/tags/Tomcat/"},{"text":"Servlet","weight":2,"link":"/tags/Servlet/"},{"text":"Cookie","weight":2,"link":"/tags/Cookie/"},{"text":"Session","weight":2,"link":"/tags/Session/"},{"text":"jsp","weight":1,"link":"/tags/jsp/"},{"text":"jstl","weight":1,"link":"/tags/jstl/"},{"text":"el表达式","weight":1,"link":"/tags/el表达式/"},{"text":"Redis","weight":1,"link":"/tags/Redis/"},{"text":"Filter","weight":1,"link":"/tags/Filter/"},{"text":"Listener","weight":1,"link":"/tags/Listener/"}], {
         autoResize: true
     });
 </script>
@@ -1397,9 +1415,8 @@ function delay() {
   <div id="stars3"></div>  
 </div>
 
-/* 模式判断 */
 <script>
-    /* 模式判断 */
+/* 模式判断 */
     if (localStorage.getItem('isDark') === '1') {
         document.body.classList.add('DarkMode');
         $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
