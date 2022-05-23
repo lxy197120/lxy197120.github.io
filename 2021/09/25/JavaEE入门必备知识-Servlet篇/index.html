@@ -686,25 +686,25 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211011001024371.png"></p>
+                <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211011001024371.png"></p>
 <h2 id="1-Servlet-工作流程以及实现"><a href="#1-Servlet-工作流程以及实现" class="headerlink" title="1.Servlet 工作流程以及实现"></a>1.Servlet 工作流程以及实现</h2><h3 id="1-1：主要内容"><a href="#1-1：主要内容" class="headerlink" title="1.1：主要内容"></a>1.1：主要内容</h3><ul>
 <li>1.创建普通java类</li>
 <li>2.满足Servlet规范（继承HTTPServlet类）</li>
 <li>3.重写service方法（当请求Servlet类时，会自动调用service方法）</li>
 <li>4.设置Servlet对外访问路径<br> 如下：</li>
 </ul>
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210925163435755.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210925163435755.png"></p>
 <p>//其中参数代表，localhost:8080/项目名/value可以访问到service（）</p>
 <h3 id="1-2：实现流程"><a href="#1-2：实现流程" class="headerlink" title="1.2：实现流程"></a>1.2：实现流程</h3><p>然后启动Tomcat，idea控制台会显示 Hello！！！，因为接收请求成功，执行service（）方法，然后向浏览器响应66666!</p>
 <p>谷歌浏览器，鼠标右击打开检查，打开Network，点击viewsource如下：查看请求头和响应头！！</p>
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210922215455802.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210922215455802.png"> </p>
 <p>通过请求头获知浏览器访问的哪个主机</p>
 <p>再通过请求行获取访问的是哪一个web应用</p>
 <p>再通过请求行中的请求路径获知访问的是哪一个资源</p>
 <p>通过获取资源路径在配置中匹配到真实路径</p>
 <p>服务器会创建servlet对象，（如果是第一次访问，创建servlet实例，并调用init方法进行初始化操作）</p>
 <p>调用service（request，response）方法来处理请求和响应的操作<br>调用service完毕后会返回服务器，由服务器讲response缓冲区的数据取出，以http响应的格式发送给浏览器</p>
-<h3 id="1-3：最终流程总结"><a href="#1-3：最终流程总结" class="headerlink" title="1.3：最终流程总结"></a>1.3：最终流程总结</h3><p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210925163212830.png"></p>
+<h3 id="1-3：最终流程总结"><a href="#1-3：最终流程总结" class="headerlink" title="1.3：最终流程总结"></a>1.3：最终流程总结</h3><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210925163212830.png"></p>
 <h2 id="2-HttpServletRequest对象-请求"><a href="#2-HttpServletRequest对象-请求" class="headerlink" title="2.HttpServletRequest对象(请求)"></a>2.HttpServletRequest对象(请求)</h2><p>​    HttpServletRequest对象代表客户端的请求，当客户端通过HTTP协议访问服务器时，HTTP请求头中的所有信息都封装在这个对象中，通过这个对象提供的方法，可以获得客户端请求的所有信息。</p>
 <h3 id="2-1-接收请求"><a href="#2-1-接收请求" class="headerlink" title="2.1.接收请求"></a>2.1.接收请求</h3><h4 id="2-1-1-常用方法"><a href="#2-1-1-常用方法" class="headerlink" title="2.1.1.常用方法"></a>2.1.1.常用方法</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/*1.常用方法
 *   1.获取请求方式（get/post等）
@@ -721,7 +721,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 //        System.out.println(req.getContextPath());
 </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210925163053662.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210925163053662.png"></p>
 <h4 id="2-1-2-获取请求参数"><a href="#2-1-2-获取请求参数" class="headerlink" title="2.1.2.获取请求参数"></a>2.1.2.获取请求参数</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>   <span class="token number">1.</span>获取指定参数名的参数值
 <span class="token operator">*</span>       request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"参数名"</span><span class="token punctuation">)</span>
 <span class="token operator">*</span>       注：
@@ -741,7 +741,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 <span class="token comment">//获取多个参数</span>
 <span class="token comment">//System.out.println(req.getParameterValues("hobby").length);</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210923105454863.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210923105454863.png"></p>
 <h3 id="2-2-请求乱码问题"><a href="#2-2-请求乱码问题" class="headerlink" title="2.2.请求乱码问题"></a>2.2.请求乱码问题</h3><h4 id="2-2-1-乱码原因"><a href="#2-2-1-乱码原因" class="headerlink" title="2.2.1.乱码原因"></a>2.2.1.乱码原因</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">request有默认的解析编码，ISO<span class="token operator">-</span><span class="token number">8859</span><span class="token operator">-</span><span class="token number">1</span>，这种编码不支持中文，传递中文参数必定乱码<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="2-2-2-解决方案"><a href="#2-2-2-解决方案" class="headerlink" title="2.2.2.解决方案"></a>2.2.2.解决方案</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>      <span class="token number">1.</span>只针对POST请求的乱码问题（处理所有参数）
@@ -885,12 +885,12 @@ resp<span class="token punctuation">.</span><span class="token function">addCook
 <span class="token class-name">Cookie</span> cookie <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cookie</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//这个不编码会报错</span>
 resp<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span>cookie<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210925163627061.png">只编码不解码，在输出端会出现这个问题!</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210925163627061.png">只编码不解码，在输出端会出现这个问题!</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//用这个解码响应浏览器</span>
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"name:"</span> <span class="token operator">+</span> <span class="token class-name">URLDecoder</span><span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>cookie<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"value:"</span> <span class="token operator">+</span> <span class="token class-name">URLDecoder</span><span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>cookie<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210923151228648.png">解码后的样子！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210923151228648.png">解码后的样子！</p>
 </li>
 <li><p>同名Cookie问题</p>
 </li>
@@ -928,7 +928,7 @@ resp<span class="token punctuation">.</span><span class="token function">addCook
         cookie04<span class="token punctuation">.</span><span class="token function">setPath</span><span class="token punctuation">(</span><span class="token string">"/JavaWeb/cook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         resp<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span>cookie04<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210923153610785.png">一个项目下可以设置多个资源路径</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210923153610785.png">一个项目下可以设置多个资源路径</p>
 <h2 id="5-HttpSession对象"><a href="#5-HttpSession对象" class="headerlink" title="5.HttpSession对象"></a>5.HttpSession对象</h2><p>​        HTTPSession是Java平台对session机制的实现规范，因为它仅仅是个接口，具体到每个web应用服务器的提供商，除了对规范支持之外，仍然会有一些规范里没有规定的细微差异。<br>HTTPSession对象将在用户第1次访问服务器时由容器创建(只有访问JSP、Servlet等程序时才会创建，只访问HTML、image等静态资源并不会创建)，当用户调用其失效方法(invalidate()方法)或超过其最大不活动时间时会失效。在会话有效期间，用户与服务器之间的多次请求都属于同一个会话。<br>————————————————<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_49092628/article/details/109287535">https://blog.csdn.net/weixin_49092628/article/details/109287535</a></p>
 <h3 id="5-1-标识符JSESSIONID"><a href="#5-1-标识符JSESSIONID" class="headerlink" title="5.1.标识符JSESSIONID"></a>5.1.标识符JSESSIONID</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>      <span class="token number">2.</span>JSESSIONID标识符
 <span class="token operator">*</span>          <span class="token number">2.1</span>当请求达到服务器时，如果使用了session，服务器回去获取一个JSESSIONID的cookie对象
@@ -971,7 +971,7 @@ session<span class="token punctuation">.</span><span class="token function">setA
 <span class="token comment">//重定向(两次请求->request不共享)</span>
 resp<span class="token punctuation">.</span><span class="token function">sendRedirect</span><span class="token punctuation">(</span><span class="token string">"se02"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211014002144048.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211014002144048.png"></p>
 <h3 id="5-3-session对象的销毁"><a href="#5-3-session对象的销毁" class="headerlink" title="5.3.session对象的销毁"></a>5.3.session对象的销毁</h3><p>​        当客户第一次请求servlet并且操作session时，session对象生成，Tomcat中session默认存活时间式神30min，即你不操作界面的时间，一旦有操作，session会重新计时</p>
 <p>​        那么session的默认时间在哪里可以更改呢？</p>
 <p>​        -&gt;在Tomcat中的conf目录下的web.xml文件中可以进行修改，不建议修改</p>
@@ -1001,11 +1001,11 @@ session<span class="token punctuation">.</span><span class="token function">setM
 <span class="token comment">//手动销毁</span>
 session<span class="token punctuation">.</span><span class="token function">invalidate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924112816982.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924112816982.png"> </p>
 <p><strong>重定向后session不发生改变，SessionId保持一致</strong></p>
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924113030929.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924113030929.png"> </p>
 <p><strong>20秒后session失效，重定向到新页面创建新的SessionId，对比前后Session02的SessionId即可</strong></p>
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924113227570.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924113227570.png"> </p>
 <p><strong>设置session失效，所以重定向后两个页面的sessionId不一致</strong></p>
 <h2 id="6-ServletContext对象"><a href="#6-ServletContext对象" class="headerlink" title="6.ServletContext对象"></a>6.ServletContext对象</h2><p>​        每一个web应用有且只有一个ServletContext对象，又称Application对象，从名称中可以得知，该对象是与应用程序相关的。在WEB容器启动的时候，会为每一个WEB应用程序创建一个对应的ServletContext对象。</p>
 <p>​        该对象有两大作用，第一：作为域对象用来共享数据，此时数据在整个应用程序中共享；第二：该对象保存了当前应用程序相关信息，例如可以通过getServerInfo()获取当前服务器信息，getRealPath(String path)获取资源的真实路径等。</p>
@@ -1035,7 +1035,7 @@ session<span class="token punctuation">.</span><span class="token function">inva
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"当前服务器的版本信息"</span> <span class="token operator">+</span> serverInfo<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924135524146.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20210924135524146.png"></p>
 <h3 id="6-2-ServletContext域对象"><a href="#6-2-ServletContext域对象" class="headerlink" title="6.2.ServletContext域对象"></a>6.2.ServletContext域对象</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/*
 * 作用域
 *      在这个应用程序中有效，只要服务器关闭就失效
@@ -1094,8 +1094,8 @@ session<span class="token punctuation">.</span><span class="token function">inva
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>​        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924145634704.png" alt="image-20210924145634704"  /> </p>
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924145653564.png"> </p>
+<p>​        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924145634704.png" alt="image-20210924145634704"  /> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924145653564.png"> </p>
 <h3 id="7-2-文件下载"><a href="#7-2-文件下载" class="headerlink" title="7.2.文件下载"></a>7.2.文件下载</h3><p>​        文件下载，即将服务器上的资源下载（拷贝）到本地，我们可以通过两种方式下载。第一只是通过超链接本身的特性来下载；第二种是通过代码下载。</p>
 <h4 id="7-2-1-超链接下载"><a href="#7-2-1-超链接下载" class="headerlink" title="7.2.1.超链接下载"></a>7.2.1.超链接下载</h4><p>​        当我们在Html或者Jsp页面中使用a标签时，原意是希望能够进行跳转，但当超链接遇到浏览器不识别的资源时也会自动下载；当遇到浏览器能够直接显示的资源，浏览器会默认显示出来，不如txt，png，jpg等。当然我们也可以通过<strong>download属性</strong>规定浏览器进行下载。但有些浏览器不支持。</p>
 <p>​        <strong>默认下载：</strong></p>
@@ -1108,15 +1108,15 @@ session<span class="token punctuation">.</span><span class="token function">inva
 &lt;a href&#x3D;&quot;bg1.7z&quot;&gt;压缩图片&lt;&#x2F;a&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>​        </p>
-<img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924151944322.png" alt="image-20210924151944322" style="zoom:50%;"/> 
+<img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924151944322.png" alt="image-20210924151944322" style="zoom:50%;"/> 
 
 <p>​        <strong>指定download属性下载：</strong></p>
 <h3 id=""><a href="#" class="headerlink" title=""></a></h3><pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;h4&gt;download属性&lt;&#x2F;h4&gt;
 &lt;a href&#x3D;&quot;test.html&quot; download&gt;Html文件&lt;&#x2F;a&gt;
 &lt;a href&#x3D;&quot;test.html&quot; download&#x3D;&quot;demo.txt&quot;&gt;下载(.Html转换.Txt文件)&lt;&#x2F;a&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924152501024.png" alt="image-20210924152501024" style="zoom:80%;" /> 点击Html文件</p>
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924152550593.png" alt="image-20210924152550593" style="zoom: 80%;" /> 点击下载链接</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924152501024.png" alt="image-20210924152501024" style="zoom:80%;" /> 点击Html文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210924152550593.png" alt="image-20210924152550593" style="zoom: 80%;" /> 点击下载链接</p>
 <h4 id="7-2-2-后台实现下载"><a href="#7-2-2-后台实现下载" class="headerlink" title="7.2.2.后台实现下载"></a>7.2.2.后台实现下载</h4><p>​        <strong>实现步骤</strong></p>
 <pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;form action&#x3D;&quot;downloadServlet&quot;&gt;
     文件名:&lt;input type&#x3D;&quot;text&quot;name&#x3D;&quot;filename&quot;&gt;
@@ -1171,8 +1171,8 @@ session<span class="token punctuation">.</span><span class="token function">inva
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210925145311713.png"> 后台下载会在服务器内部找到对应文件，找得到则跳出下载提示框！！</p>
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210925145144128.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210925145311713.png"> 后台下载会在服务器内部找到对应文件，找得到则跳出下载提示框！！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20210925145144128.png"></p>
 
                 
             </div>
@@ -1380,10 +1380,10 @@ session<span class="token punctuation">.</span><span class="token function">inva
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1752,7 +1752,7 @@ new Valine({
                 <a href="/2021/09/28/Oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80/">
                     <div class="card-image">
                         
-                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211011001535361.png" class="responsive-img" alt="Oracle数据库开发基础">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211011001535361.png" class="responsive-img" alt="Oracle数据库开发基础">
                         
                         <span class="card-title">Oracle数据库开发基础</span>
                     </div>
@@ -1804,7 +1804,7 @@ new Valine({
                 <a href="/2021/09/25/hello-world/">
                     <div class="card-image">
                         
-                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211011001916654.png" class="responsive-img" alt="Hexo上传博客">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211011001916654.png" class="responsive-img" alt="Hexo上传博客">
                         
                         <span class="card-title">Hexo上传博客</span>
                     </div>
@@ -2469,12 +2469,6 @@ function delay() {
 
 
 
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                preloadRatio: 1,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=(n.imageLazyLoadSetting.preloadRatio,Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+240||document.documentElement.clientHeight+240)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 
 </html>

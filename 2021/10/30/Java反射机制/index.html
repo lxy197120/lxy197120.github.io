@@ -674,7 +674,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030025908336.png"></p>
+                <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030025908336.png"></p>
 <h1 id="Java反射机制"><a href="#Java反射机制" class="headerlink" title="Java反射机制"></a>Java反射机制</h1><h2 id="一、什么是Java反射机制？"><a href="#一、什么是Java反射机制？" class="headerlink" title="一、什么是Java反射机制？"></a>一、什么是Java反射机制？</h2><p>​        Java的反射(reflection)机制是指在程序的运行状态中，可以构造任意一个类的对象，可以了解任意一个对象所属的类，可以了解任意一个类的成员变量和方法，可以调用任意一个对象的属性和方法。这种动态获取程序信息以及动态调用对象的功能称为Java语言的反射机制。反射被视为动态语言的关键。</p>
 <p>​        Java反射机制主要提供了以下功能： 在运行时判断任意一个对象所属的类;在运行时构造任意一个类的对象;在运行时判断任意一个类所具有的成员变量和方法;在运行时调用任意一个对象的方法;生成动态代理。</p>
 <p>​        反射技术大量用于Java设计模式和框架技术，最常见的设计模式就是工厂模式和单例模式。</p>
@@ -699,7 +699,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 <li>​        App ClassLoader（应用类加载器）： </li>
 </ul>
 <p>​                App ClassLoader是应用程序类加载器，负责加载应用程序classpath目录下的所有jar和class文 件。它的父加载器为Ext ClassLoader</p>
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030025508894%20-%20%E5%89%AF%E6%9C%AC.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030025508894%20-%20%E5%89%AF%E6%9C%AC.png"> </p>
 <pre class="line-numbers language-none"><code class="language-none">类通常是按需加载，即第一次使用该类时才加载。由于有了类加载器，Java运行时系统不需要知道文件与 文件系统。学习类加载器时，掌握Java的委派概念很重要。 
 双亲委派模型：如果一个类加载器收到了一个类加载请求，它不会自己去尝试加载这个类，而是把这个请求 转交给父类加载器去完成。每一个层次的类加载器都是如此。因此所有的类加载请求都应该传递到最顶层的 启动类加载器中，只有到父类加载器反馈自己无法完成这个加载请求（在它的搜索范围没有找到这个类） 时，子类加载器才会尝试自己去加载。委派的好处就是避免有些类被重复加载。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
@@ -709,7 +709,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 <ol>
 <li>首先我们在项目下建立一个source文件目录，如何设置为资源根目录</li>
 </ol>
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030010218043.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030010218043.png"> </p>
 <p>​    2.如何通过类.class获取类加载器进而加载配置文件</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">InputStream</span> is <span class="token operator">=</span> <span class="token class-name">Demo</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getResourceAsStream</span><span class="token punctuation">(</span><span class="token string">"config.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name">BufferedReader</span> br <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BufferedReader</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">InputStreamReader</span><span class="token punctuation">(</span>is<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -724,7 +724,7 @@ is<span class="token punctuation">.</span><span class="token function">close</sp
 
 
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030010257026.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030010257026.png"> </p>
 <p>​    <strong>值得注意的是默认加载的是src路径下的文件，但是当项目存在resource root目录时，就变为了加载resource root下的文件了。</strong></p>
 <h2 id="三、Class对象的相关操作"><a href="#三、Class对象的相关操作" class="headerlink" title="三、Class对象的相关操作"></a>三、Class对象的相关操作</h2><p>要想了解一个类,必须先要获取到该类的字节码文件对象.</p>
 <p>在Java中，每一个字节码文件，被夹在到内存后，都存在一个对应的Class类型的对象</p>
@@ -760,10 +760,10 @@ cs3<span class="token punctuation">.</span><span class="token function">setAcces
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>p3<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>People类中三个构造方法</strong></p>
-<img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030012012654.png" style="zoom: 67%;" /> 
+<img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030012012654.png" style="zoom: 67%;" /> 
 
 <p><strong>输出结果</strong></p>
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030011713738.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030011713738.png"> </p>
 <h3 id="3-获取Method-方法"><a href="#3-获取Method-方法" class="headerlink" title="3.获取Method(方法)"></a>3.获取Method(方法)</h3><ol>
 <li>getMethod(StringmethodName,class..clss)</li>
 </ol>
@@ -801,7 +801,7 @@ setName<span class="token punctuation">.</span><span class="token function">invo
 setAge<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>p<span class="token punctuation">,</span><span class="token number">666</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030012827224.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030012827224.png"> </p>
 <h3 id="4-获取Field-属性"><a href="#4-获取Field-属性" class="headerlink" title="4.获取Field(属性)"></a>4.获取Field(属性)</h3><ol>
 <li>getDeclaredField(String filedName) </li>
 </ol>
@@ -832,7 +832,7 @@ phoneNumber<span class="token punctuation">.</span><span class="token function">
 
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>o<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030013733194.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030013733194.png"> </p>
 <h2 id="四、关于反射和注解"><a href="#四、关于反射和注解" class="headerlink" title="四、关于反射和注解"></a>四、关于反射和注解</h2><h3 id="1-获取类，属性，方法的全部注解对象"><a href="#1-获取类，属性，方法的全部注解对象" class="headerlink" title="1.获取类，属性，方法的全部注解对象"></a>1.获取类，属性，方法的全部注解对象</h3><pre class="line-numbers language-none"><code class="language-none">Annotation[] annotations01 &#x3D; Class&#x2F;Field&#x2F;Method.getAnnotations(); 
 for (Annotation annotation : annotations01) &#123;
 	System.out.println(annotation); 
@@ -867,7 +867,7 @@ for (Annotation annotation : annotations01) &#123;
     <span class="token class-name">String</span> <span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030014654221.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030014654221.png"> </p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Class</span> c <span class="token operator">=</span> <span class="token class-name">Class</span><span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.java.reflectandInterface.Book"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name">TableAnnotation</span> ta <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">TableAnnotation</span><span class="token punctuation">)</span> c<span class="token punctuation">.</span><span class="token function">getAnnotation</span><span class="token punctuation">(</span><span class="token class-name">TableAnnotation</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"表名:"</span> <span class="token operator">+</span> ta<span class="token punctuation">.</span><span class="token function">value</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -881,7 +881,7 @@ for (Annotation annotation : annotations01) &#123;
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030014750369.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030014750369.png"> </p>
 <h2 id="五、内省-现阶段了解"><a href="#五、内省-现阶段了解" class="headerlink" title="五、内省(现阶段了解)"></a>五、内省(现阶段了解)</h2><h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h3><p>基于反射 , java所提供的一套应用到JavaBean的API </p>
 <p>一个定义在包中的类 , 拥有<strong>无参构造器</strong> 所有<strong>属性私有</strong>, 所有属性提供<strong>get/set方法</strong> 实现了<strong>序列化接口</strong> 这种类, 我们称其为 bean类 . </p>
 <p>Java提供了一套java.beans包的api , 对于反射的操作, 进行了封装 ! </p>
@@ -914,7 +914,7 @@ for (Annotation annotation : annotations01) &#123;
     <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>pd<span class="token punctuation">.</span><span class="token function">getPropertyType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030015632212.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030015632212.png"></p>
 
                 
             </div>
@@ -1110,10 +1110,10 @@ for (Annotation annotation : annotations01) &#123;
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1482,7 +1482,7 @@ new Valine({
                 <a href="/2021/11/18/Jsp%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8%E5%BF%85%E5%A4%87%E7%9F%A5%E8%AF%86/">
                     <div class="card-image">
                         
-                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118153900486.png" class="responsive-img" alt="Jsp简单入门必备知识">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118153900486.png" class="responsive-img" alt="Jsp简单入门必备知识">
                         
                         <span class="card-title">Jsp简单入门必备知识</span>
                     </div>
@@ -1538,7 +1538,7 @@ new Valine({
                 <a href="/2021/10/20/XML%E5%92%8CJSON%E7%9F%A5%E8%AF%86%E7%82%B9/">
                     <div class="card-image">
                         
-                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211020234358063.png" class="responsive-img" alt="XML和JSON知识点">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211020234358063.png" class="responsive-img" alt="XML和JSON知识点">
                         
                         <span class="card-title">XML和JSON知识点</span>
                     </div>
@@ -2207,12 +2207,6 @@ function delay() {
 
 
 
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                preloadRatio: 1,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=(n.imageLazyLoadSetting.preloadRatio,Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+240||document.documentElement.clientHeight+240)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 
 </html>

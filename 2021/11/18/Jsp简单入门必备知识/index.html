@@ -682,7 +682,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118153900486.png"></p>
+                <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118153900486.png"></p>
 <h2 id="一、什么是Jsp"><a href="#一、什么是Jsp" class="headerlink" title="一、什么是Jsp"></a>一、什么是Jsp</h2><p>​    JSP全名为Java Server Pages，中⽂名叫java服务器⻚⾯，其根本是⼀个简化的Servlet设计，它 是由</p>
 <p>Sun Microsystems公司倡导、许多公司参与⼀起建⽴的⼀种动态⽹⻚技术标准。JSP技术有点类似ASP技</p>
 <p>术，它是在传统的⽹⻚HTML⽂件(<em>.htm,</em>.html)中插⼊Java程序段(Scriptlet)和JSP标记(tag)，从⽽形成</p>
@@ -730,7 +730,7 @@ application:&lt;%&#x3D;application.getAttribute(&quot;c1&quot;)%&gt; &lt;br&gt;
 %&gt;
 pageContext:&lt;%&#x3D;pageContext.getAttribute(&quot;d1&quot;)%&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118131923632.png"><br>    另外开一个jsp页面取这些值：（因为服务端没有存储处理请求，直接返回页面所以request为空，因为不是同一个页面所以在前一个页面用pageContext存的值在新开的页面也是为空)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118131923632.png"><br>    另外开一个jsp页面取这些值：（因为服务端没有存储处理请求，直接返回页面所以request为空，因为不是同一个页面所以在前一个页面用pageContext存的值在新开的页面也是为空)</p>
 <pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;h1&gt;test2.jsp&lt;&#x2F;h1&gt;
 
 request&#x3D;&lt;%&#x3D;request.getAttribute(&quot;a1&quot;)%&gt;&lt;br&gt;
@@ -741,7 +741,7 @@ application:&lt;%&#x3D;application.getAttribute(&quot;c1&quot;)%&gt; &lt;br&gt;
 
 pageContext:&lt;%&#x3D;pageContext.getAttribute(&quot;d1&quot;)%&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118132149734.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118132149734.png"> </p>
 <h2 id="四、Jsp的工作原理"><a href="#四、Jsp的工作原理" class="headerlink" title="四、Jsp的工作原理"></a>四、Jsp的工作原理</h2><p>​    当浏览器访问tomcat服务器.jsp页面会翻译成index_jsp.java⽂件，对这个java⽂件进⾏编译，产⽣⼀个</p>
 <p>index.jsp⽂件，会将index.jsp翻译成index_jsp.java⽂件，对这个java⽂件进⾏编译，产⽣⼀个</p>
 <p>index_jsp.class⽂件，将class⽂件加载运⾏。将JSP翻译成java⽂件，它是将JSP中的所有的HTML代码通</p>
@@ -800,7 +800,7 @@ String url&#x3D; config.getServletContext().getRealPath(&quot;&#x2F;image&quot;)
 <pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;%@ page contentType&#x3D;&quot;text&#x2F;html;charset&#x3D;UTF-8&quot; language&#x3D;&quot;java&quot; isErrorPage&#x3D;&quot;true&quot; %&gt;
 &lt;--声明错误的页面isErrorPage要为&#39;true&#39;--&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118134640646.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118134640646.png"> </p>
 <p>发现当访问有错误信息的test.jsp页面时，会自动跳转到test2.jsp页面，并且显示出报错信息。/ by zero</p>
 <p>jsp的作⽤域:</p>
 <p>pageContext -&gt; request -&gt; session -&gt; application</p>
@@ -839,7 +839,7 @@ directive：指令名称 attribute 属性名 value:属性值<span aria-hidden="t
     &lt;%@include file&#x3D;&quot;buttom.jsp&quot;%&gt;
 &lt;&#x2F;body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118140651558.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118140651558.png"> </p>
 <h3 id="3-taglib指令"><a href="#3-taglib指令" class="headerlink" title="3.taglib指令"></a>3.taglib指令</h3><pre><code> JSP API允许⽤户⾃定义标签，⼀个⾃定义标签库就是⾃定义标签的集合。
 </code></pre>
 <p>​     Taglib指令引⼊⼀个⾃定义标签集合的定义，包括库路径、⾃定义标签。</p>
@@ -902,7 +902,7 @@ directive：指令名称 attribute 属性名 value:属性值<span aria-hidden="t
     application的a4&#x3D;$&#123;applicationScope.a4&#125;
 &lt;&#x2F;body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118141959989.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118141959989.png"> </p>
 <h2 id="九、JSTL"><a href="#九、JSTL" class="headerlink" title="九、JSTL"></a>九、JSTL</h2><h3 id="1-什么是JSTL"><a href="#1-什么是JSTL" class="headerlink" title="(1)什么是JSTL"></a><strong>(1)什么是JSTL</strong></h3><p>JSP标准标签库（JSTL）是⼀个JSP标签集合，它封装了JSP应⽤的通⽤核⼼功能。</p>
 <p>JSTL⽀持通⽤的、结构化的任务，⽐如迭代，条件判断，XML⽂档操作，国际化标签SQL标签。 除了</p>
 <p><strong>这些，它还提供了⼀个框架来使⽤集成JSTL的⾃定义标签。</strong></p>
@@ -913,7 +913,7 @@ directive：指令名称 attribute 属性名 value:属性值<span aria-hidden="t
 <li>下载 jakarta-taglibs-standard-1.1.2.zip 包并解压，将 jakarta-taglibs-standard-1.1.2/lib/ 下的两</li>
 </ol>
 <p>个 jar ⽂件：standard.jar 和 jstl.jar ⽂件拷⻉到 /WEB-INF/lib/ 下。</p>
-<p>​    <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118142602885.png"></p>
+<p>​    <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118142602885.png"></p>
 <ol start="2">
 <li>在JSP⻚⾯中引⼊&lt;%@ taglib prefix=”⻚⾯使⽤的名称” uri=”功能范围的路径”%&gt;    </li>
 </ol>
@@ -1010,7 +1010,7 @@ date&#x3D;$&#123;mytime&#125;
 
 
 <p><strong>上述举例代码输出实例：</strong></p>
-<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118144212383.png"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211118144212383.png"> </p>
 
                 
             </div>
@@ -1214,10 +1214,10 @@ date&#x3D;$&#123;mytime&#125;
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1586,7 +1586,7 @@ new Valine({
                 <a href="/2021/11/21/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E5%92%8C%E8%BF%87%E6%BB%A4%E5%99%A8%E6%8B%A6%E6%88%AA%E5%99%A8/">
                     <div class="card-image">
                         
-                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121161816512.png" class="responsive-img" alt="会话跟踪和过滤器拦截器">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121161816512.png" class="responsive-img" alt="会话跟踪和过滤器拦截器">
                         
                         <span class="card-title">会话跟踪和过滤器拦截器</span>
                     </div>
@@ -1650,7 +1650,7 @@ new Valine({
                 <a href="/2021/10/30/Java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/">
                     <div class="card-image">
                         
-                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030025908336.png" class="responsive-img" alt="Java反射机制">
+                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20211030025908336.png" class="responsive-img" alt="Java反射机制">
                         
                         <span class="card-title">Java反射机制</span>
                     </div>
@@ -2315,12 +2315,6 @@ function delay() {
 
 
 
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                preloadRatio: 1,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=(n.imageLazyLoadSetting.preloadRatio,Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+240||document.documentElement.clientHeight+240)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 
 </html>
