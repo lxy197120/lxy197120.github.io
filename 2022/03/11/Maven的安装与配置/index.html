@@ -674,25 +674,25 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/3.jpg"></p>
+                <p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/3.jpg"></p>
 <h1 id="Maven笔记二"><a href="#Maven笔记二" class="headerlink" title="Maven笔记二"></a>Maven笔记二</h1><h2 id="1-Maven的安装与配置"><a href="#1-Maven的安装与配置" class="headerlink" title="1.Maven的安装与配置"></a>1.Maven的安装与配置</h2><h3 id="1-1-Maven的下载"><a href="#1-1-Maven的下载" class="headerlink" title="1.1 Maven的下载"></a>1.1 Maven的下载</h3><p>从网站 <a target="_blank" rel="noopener" href="http://maven.apache.org/download.cgi">http://Maven.apache.org/download.cgi</a> 下载</p>
 <p>我使用的是3.3.9版本。</p>
 <h3 id="1-2-Maven的安装"><a href="#1-2-Maven的安装" class="headerlink" title="1.2 Maven的安装"></a>1.2 Maven的安装</h3><p>将下载好的Maven安装包解压到一个不含有中文和空格的目录中。</p>
 <p>安装包解压即可使用。</p>
-<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220310170056197.png"> </p>
+<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220310170056197.png"> </p>
 <pre class="line-numbers language-none"><code class="language-none">目录说明： bin目录： 该目录包含了 mvn 运行的脚本 
 boot目录： Maven运行需要类加载器 
 conf目录： 该目录包含了一个非常重要的文件 settings.xml。直接修改该文件，就能在机器上全局地定制 Maven 的行为
 lib目录： Maven运行依赖jar包<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="1-3-配置Maven的环境变量"><a href="#1-3-配置Maven的环境变量" class="headerlink" title="1.3 配置Maven的环境变量"></a>1.3 配置Maven的环境变量</h3><p>前提必须有java的环境变量（推荐使用JDK8）：</p>
-<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220310170247303.png"> </p>
+<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220310170247303.png"> </p>
 <p>打开环境变量的系统变量，选择Path配置到maven安装的bin目录下</p>
-<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220310170437466.png"> </p>
+<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220310170437466.png"> </p>
 <p>通过 mvn -v命令检查 Maven是否安装成功</p>
-<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220310170602206.png"> </p>
+<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220310170602206.png"> </p>
 <h3 id="1-4-修改Maven的配置文件"><a href="#1-4-修改Maven的配置文件" class="headerlink" title="1.4 修改Maven的配置文件"></a>1.4 修改Maven的配置文件</h3><p>找到Maven安装路径下的settings.xml配置文件</p>
-<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220310170828886.png"> </p>
+<p><img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220310170828886.png"> </p>
 <h4 id="1-4-1-配置默认的JDK版本"><a href="#1-4-1-配置默认的JDK版本" class="headerlink" title="1.4.1 配置默认的JDK版本"></a>1.4.1 配置默认的JDK版本</h4><p>Maven默认使用jdk1.7，我们常用的是jdk1.8，所以直接在配置文件中修改。</p>
 <pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>profile</span><span class="token punctuation">></span></span> 
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>jdk-1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span> 
@@ -1005,10 +1005,10 @@ url:阿里云Maven仓库的地址 --></span>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1374,18 +1374,18 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/11/Maven%E6%90%AD%E5%BB%BAjavaweb%E9%A1%B9%E7%9B%AE/">
+                <a href="/2022/03/11/Maven%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
                     <div class="card-image">
                         
-                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/2.jpg" class="responsive-img" alt="Maven与javaweb">
+                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1.jpg" class="responsive-img" alt="Maven基础">
                         
-                        <span class="card-title">Maven与javaweb</span>
+                        <span class="card-title">Maven基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Maven如何在IDEA下搭建javaweb项目
+                            浅浅入门一下Maven是什么吧
                         
                     </div>
                     <div class="publish-info">
@@ -1407,8 +1407,8 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Maven%E6%90%AD%E5%BB%BAjavaweb/">
-                        <span class="chip bg-color">Maven搭建javaweb</span>
+                    <a href="/tags/Maven%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">Maven基础</span>
                     </a>
                     
                 </div>
@@ -1425,7 +1425,7 @@ new Valine({
                 <a href="/2022/03/11/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Redis/">
                     <div class="card-image">
                         
-                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1646998706456.jpg" class="responsive-img" alt="Linux下安装Redis">
+                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1646998706456.jpg" class="responsive-img" alt="Linux下安装Redis">
                         
                         <span class="card-title">Linux下安装Redis</span>
                     </div>
