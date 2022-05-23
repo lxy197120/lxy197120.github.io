@@ -674,14 +674,14 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121162532008.png"> </p>
+                <p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121162532008.png"> </p>
 <h1 id="MVC的简单demo"><a href="#MVC的简单demo" class="headerlink" title="MVC的简单demo"></a>MVC的简单demo</h1><h2 id="简单了解MVC"><a href="#简单了解MVC" class="headerlink" title="简单了解MVC"></a>简单了解MVC</h2><p>M：(Model) 模型 : 应⽤程序的核⼼功能，管理这个模块中⽤的数据和值（bean,dao）；</p>
 <p>V(View )视图: 视图提供模型的展示，管理模型如何显示给⽤户，它是应⽤程序的外观；（jsp/html）</p>
 <p>C(Controller)控制器: 对⽤户的输⼊做出反应，管理⽤户和视图的交互，是连接模型和视图的枢纽。</p>
 <p>（servlet/service）</p>
 <p>MVC⽤于将web（UI）层进⾏职责解耦</p>
 <p><strong>说明:mvc设计模式(不属于23种设计模式)</strong></p>
-<h2 id="这里我不打算写一些理论知识直接上代码咯"><a href="#这里我不打算写一些理论知识直接上代码咯" class="headerlink" title="这里我不打算写一些理论知识直接上代码咯"></a>这里我不打算写一些理论知识直接上代码咯</h2><h3 id="一、分层（包含M和C）"><a href="#一、分层（包含M和C）" class="headerlink" title="一、分层（包含M和C）"></a>一、分层（包含M和C）</h3><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121155442696.png"> </p>
+<h2 id="这里我不打算写一些理论知识直接上代码咯"><a href="#这里我不打算写一些理论知识直接上代码咯" class="headerlink" title="这里我不打算写一些理论知识直接上代码咯"></a>这里我不打算写一些理论知识直接上代码咯</h2><h3 id="一、分层（包含M和C）"><a href="#一、分层（包含M和C）" class="headerlink" title="一、分层（包含M和C）"></a>一、分层（包含M和C）</h3><p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121155442696.png"> </p>
 <h4 id="1-bean"><a href="#1-bean" class="headerlink" title="1.bean"></a>1.bean</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//实体类包主要存放于数据库对应的实体类</span>
 <span class="token comment">//类名=表名</span>
 <span class="token comment">//属性名=列名</span>
@@ -728,7 +728,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="2-dao"><a href="#2-dao" class="headerlink" title="2.dao"></a>2.dao</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121155735864.png"> </p>
+<h4 id="2-dao"><a href="#2-dao" class="headerlink" title="2.dao"></a>2.dao</h4><p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121155735864.png"> </p>
 <h5 id="2-1接口"><a href="#2-1接口" class="headerlink" title="2.1接口"></a>2.1接口</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//实体类+Dao=当前接口名</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">StudentDao</span> <span class="token punctuation">&#123;</span>
     <span class="token comment">//定义操作数据库的方法</span>
@@ -765,7 +765,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="3-service"><a href="#3-service" class="headerlink" title="3.service"></a>3.service</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121155830655.png"> </p>
+<h4 id="3-service"><a href="#3-service" class="headerlink" title="3.service"></a>3.service</h4><p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121155830655.png"> </p>
 <h5 id="3-1接口"><a href="#3-1接口" class="headerlink" title="3.1接口"></a>3.1接口</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//bean类名+Service=当前类名</span>
 <span class="token comment">//service层主要定义业务逻辑，现阶段主要调取dao层</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">StudentService</span> <span class="token punctuation">&#123;</span>
@@ -861,7 +861,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="5-1配置文件"><a href="#5-1配置文件" class="headerlink" title="5.1配置文件"></a>5.1配置文件</h5><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160155870.png"> </p>
+<h5 id="5-1配置文件"><a href="#5-1配置文件" class="headerlink" title="5.1配置文件"></a>5.1配置文件</h5><p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160155870.png"> </p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">url<span class="token operator">=</span>jdbc<span class="token operator">:</span>mysql<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token operator">:</span><span class="token number">3306</span><span class="token operator">/</span>javaweb<span class="token operator">?</span>useUnicode<span class="token operator">=</span><span class="token boolean">true</span><span class="token operator">&amp;</span>characterEncoding<span class="token operator">=</span>utf<span class="token operator">-</span><span class="token number">8</span><span class="token operator">&amp;</span>serverTimezone<span class="token operator">=</span><span class="token class-name">UTC</span>
 username<span class="token operator">=</span>root
 password<span class="token operator">=</span>lxy18750112980
@@ -871,7 +871,7 @@ maxActive<span class="token operator">=</span><span class="token number">10</spa
 minIdle<span class="token operator">=</span><span class="token number">5</span>
 maxWait<span class="token operator">=</span><span class="token number">3000</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="二、V的部分"><a href="#二、V的部分" class="headerlink" title="二、V的部分"></a>二、V的部分</h3><h4 id="1-导包"><a href="#1-导包" class="headerlink" title="1.导包"></a>1.导包</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160408647.png"> </p>
+<h3 id="二、V的部分"><a href="#二、V的部分" class="headerlink" title="二、V的部分"></a>二、V的部分</h3><h4 id="1-导包"><a href="#1-导包" class="headerlink" title="1.导包"></a>1.导包</h4><p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160408647.png"> </p>
 <h4 id="2-index-jsp"><a href="#2-index-jsp" class="headerlink" title="2.index.jsp"></a>2.index.jsp</h4><pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;%@ page contentType&#x3D;&quot;text&#x2F;html;charset&#x3D;UTF-8&quot; language&#x3D;&quot;java&quot; %&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -910,10 +910,10 @@ maxWait<span class="token operator">=</span><span class="token number">3000</spa
 &lt;&#x2F;body&gt;
 &lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="三、数据库"><a href="#三、数据库" class="headerlink" title="三、数据库"></a>三、数据库</h3><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160705836.png"> </p>
-<h3 id="四、样例展示"><a href="#四、样例展示" class="headerlink" title="四、样例展示"></a>四、样例展示</h3><h4 id="1-直接访问show-jsp"><a href="#1-直接访问show-jsp" class="headerlink" title="1.直接访问show.jsp"></a>1.直接访问show.jsp</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160922344.png"> </p>
-<h4 id="2-index-jsp-1"><a href="#2-index-jsp-1" class="headerlink" title="2.index.jsp"></a>2.index.jsp</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160938416.png"> </p>
-<h4 id="3-通过点击index-jsp内超链接访问show-jsp"><a href="#3-通过点击index-jsp内超链接访问show-jsp" class="headerlink" title="3.通过点击index.jsp内超链接访问show.jsp"></a>3.通过点击index.jsp内超链接访问show.jsp</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160957029.png"> </p>
+<h3 id="三、数据库"><a href="#三、数据库" class="headerlink" title="三、数据库"></a>三、数据库</h3><p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160705836.png"> </p>
+<h3 id="四、样例展示"><a href="#四、样例展示" class="headerlink" title="四、样例展示"></a>四、样例展示</h3><h4 id="1-直接访问show-jsp"><a href="#1-直接访问show-jsp" class="headerlink" title="1.直接访问show.jsp"></a>1.直接访问show.jsp</h4><p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160922344.png"> </p>
+<h4 id="2-index-jsp-1"><a href="#2-index-jsp-1" class="headerlink" title="2.index.jsp"></a>2.index.jsp</h4><p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160938416.png"> </p>
+<h4 id="3-通过点击index-jsp内超链接访问show-jsp"><a href="#3-通过点击index-jsp内超链接访问show-jsp" class="headerlink" title="3.通过点击index.jsp内超链接访问show.jsp"></a>3.通过点击index.jsp内超链接访问show.jsp</h4><p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121160957029.png"> </p>
 
                 
             </div>
@@ -1109,10 +1109,10 @@ maxWait<span class="token operator">=</span><span class="token number">3000</spa
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1481,7 +1481,7 @@ new Valine({
                 <a href="/2021/11/23/SmartUpload%E5%B7%A5%E5%85%B7%E5%8C%85%E5%AF%B9%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%8E%E4%B8%8B%E8%BD%BD/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211123114234523.png" class="responsive-img" alt="SmartUpload工具包对文件上传与下载">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211123114234523.png" class="responsive-img" alt="SmartUpload工具包对文件上传与下载">
                         
                         <span class="card-title">SmartUpload工具包对文件上传与下载</span>
                     </div>
@@ -1533,7 +1533,7 @@ new Valine({
                 <a href="/2021/11/21/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E5%92%8C%E8%BF%87%E6%BB%A4%E5%99%A8%E6%8B%A6%E6%88%AA%E5%99%A8/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121161816512.png" class="responsive-img" alt="会话跟踪和过滤器拦截器">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20211121161816512.png" class="responsive-img" alt="会话跟踪和过滤器拦截器">
                         
                         <span class="card-title">会话跟踪和过滤器拦截器</span>
                     </div>
@@ -2214,6 +2214,12 @@ function delay() {
 
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

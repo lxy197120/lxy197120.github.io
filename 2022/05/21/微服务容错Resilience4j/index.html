@@ -678,17 +678,17 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220521134201.jpg"></p>
+                <p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220521134201.jpg"></p>
 <h1 id="SpringCloud系列-微服务容错Resilience4j"><a href="#SpringCloud系列-微服务容错Resilience4j" class="headerlink" title="SpringCloud系列-微服务容错Resilience4j"></a>SpringCloud系列-微服务容错Resilience4j</h1><h2 id="1-微服务容错简介"><a href="#1-微服务容错简介" class="headerlink" title="1.微服务容错简介"></a>1.微服务容错简介</h2><p>在高并发访问下，比如天猫双11，流量持续不断的涌入，服务之间的相互调用频率突然增加，引发系统负载过高，</p>
 <p>这时系统所依赖的服务的稳定性对系统的影响非常大，而且还有很多不确定因素引起雪崩，如网络连接中断，服务宕机等。</p>
 <p>一般微服务容错组件提供了限流、隔离、降级、熔断等手段，可以有效保护我们的微服务系统。</p>
 <h2 id="1-1-隔离"><a href="#1-1-隔离" class="headerlink" title="1.1 隔离"></a>1.1 隔离</h2><p>​    微服务系统A调用B，而B调用C，这时如果C出现故障，则此时调用B的大量线程资源阻塞，慢慢的B的线程数量持续增加</p>
 <p>直到CPU耗尽到100%，整体微服务不可用，这时就需要对不可用的服务进行隔离。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1627271887085-b2b948db-bcbd-4964-ac9c-39f04c898f04.png"></p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1627271887085-b2b948db-bcbd-4964-ac9c-39f04c898f04.png"></p>
 <p>1.线程池隔离</p>
 <p>​    线程池隔离就是通过Java的线程池进行隔离，B服务调用C服务给予固定的线程数量比如12个线程，如果此时C服务宕机了就算大量的请求过来，</p>
 <p>调用C服务的接口只会占用12个线程不会占用其他工作线程资源，因此B服务就不会出现级联故障。</p>
-<img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1629197323674-59849375-d012-46f4-b0b9-253b6abc1732.png" style="zoom: 80%;" /> 
+<img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1629197323674-59849375-d012-46f4-b0b9-253b6abc1732.png" style="zoom: 80%;" /> 
 
 <p>2.信号量隔离</p>
 <p>​    隔离信号量隔离是使用Semaphore来实现的，当拿不到信号量的时候直接拒接因此不会出现超时占用其他工作线程的情况。代码如下：</p>
@@ -736,7 +736,7 @@ semaphore<span class="token punctuation">.</span><span class="token function">re
 </tbody></table>
 <h2 id="1-2-熔断"><a href="#1-2-熔断" class="headerlink" title="1.2 熔断"></a>1.2 熔断</h2><p>​    当上游的服务(支付)因为某种原因突然变得不可用或响应过慢，下游服务(订单)为了保证自己整体服务的可用性，不再继续调用目标服务，</p>
 <p>直接返回，快速释放资源。如果目标服务情况好转则恢复调用。熔断器模型。</p>
-<img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1627271741696-b466627d-7b66-4fa2-9366-a77b4b90c3f2.png" style="zoom:67%;" /> 
+<img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1627271741696-b466627d-7b66-4fa2-9366-a77b4b90c3f2.png" style="zoom:67%;" /> 
 
 
 
@@ -757,18 +757,18 @@ semaphore<span class="token punctuation">.</span><span class="token function">re
 <p>下面介绍下四种常见的限流算法：</p>
 <h3 id="1-4-1-漏桶算法"><a href="#1-4-1-漏桶算法" class="headerlink" title="1.4.1 漏桶算法"></a>1.4.1 漏桶算法</h3><p>​    漏桶算法的思路，一个固定容量的漏桶，按照常量固定速率流出水滴。如果桶是空的，则不需流出水滴。可以以任意速率流入水滴到漏桶。</p>
 <p>如果流入水滴超出了桶的容量，则流入的水滴溢出了（被丢弃），而漏桶容量是不变的。</p>
-<img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1627272534991-d952f0bb-880c-4a85-8e19-b46c8e391f2f.png" style="zoom: 50%;" />  
+<img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1627272534991-d952f0bb-880c-4a85-8e19-b46c8e391f2f.png" style="zoom: 50%;" />  
 
 <h3 id="1-4-2-令牌桶算法"><a href="#1-4-2-令牌桶算法" class="headerlink" title="1.4.2 令牌桶算法"></a>1.4.2 令牌桶算法</h3><p>​    假设限制2r/s，则按照500毫秒的固定速率往桶中添加令牌。桶中最多存放b个令牌，当桶满时，新添加的令牌被丢弃或拒绝。</p>
 <p>当一个n个字节大小的数据包到达，将从桶中删除n个令牌，接着数据包被发送到网络上。如果桶中的令牌不足n个，则不会删除令牌，</p>
 <p>且该数据包将被限流（要么丢弃，要么缓冲区等待）</p>
-<img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1627272656526-d2bc48c6-efb2-4173-9f59-617f4e0244a6.png" style="zoom: 80%;" /> 
+<img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1627272656526-d2bc48c6-efb2-4173-9f59-617f4e0244a6.png" style="zoom: 80%;" /> 
 
-<h3 id="1-4-3-固定时间窗口算法"><a href="#1-4-3-固定时间窗口算法" class="headerlink" title="1.4.3 固定时间窗口算法"></a>1.4.3 固定时间窗口算法</h3><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1627272781128-91d209f1-40ec-4f82-9711-972b932806d0.png"> </p>
+<h3 id="1-4-3-固定时间窗口算法"><a href="#1-4-3-固定时间窗口算法" class="headerlink" title="1.4.3 固定时间窗口算法"></a>1.4.3 固定时间窗口算法</h3><p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1627272781128-91d209f1-40ec-4f82-9711-972b932806d0.png"> </p>
 <p>由于计数器算法存在时间临界点缺陷，因此在时间临界点左右的极短时间段内容易遭到攻击。</p>
 <p>12:00:59-12:01:00时间段内突然并发100次请求，而紧接着跨入下一个计数周期，计数器清零，在12:01:00-12:01:01内又有100次请求。</p>
 <p>那么也就是说在时间临界点左右可能同时有2倍的阀值进行请求，从而造成后台处理请求过载的情况，导致系统运营能力不足，甚至导致系统崩溃。</p>
-<h3 id="1-4-4-滑动时间窗口算法"><a href="#1-4-4-滑动时间窗口算法" class="headerlink" title="1.4.4 滑动时间窗口算法"></a>1.4.4 滑动时间窗口算法</h3><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1627272903225-c83c589a-9717-4d9a-a005-a033e58a7010.png"></p>
+<h3 id="1-4-4-滑动时间窗口算法"><a href="#1-4-4-滑动时间窗口算法" class="headerlink" title="1.4.4 滑动时间窗口算法"></a>1.4.4 滑动时间窗口算法</h3><p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1627272903225-c83c589a-9717-4d9a-a005-a033e58a7010.png"></p>
 <h2 id="2-Resilience4j"><a href="#2-Resilience4j" class="headerlink" title="2.Resilience4j"></a>2.Resilience4j</h2><p>这里给出一些常用的配置，对于并发的请求可以采用JMeter进行压力测试，其余接口测试可以采用ApiPost </p>
 <h3 id="2-1-yaml"><a href="#2-1-yaml" class="headerlink" title="2.1 yaml"></a>2.1 yaml</h3><pre class="line-numbers language-2.yaml" data-language="2.yaml"><code class="language-2.yaml">resilience4j:
   circuitbreaker:
@@ -1055,10 +1055,10 @@ semaphore<span class="token punctuation">.</span><span class="token function">re
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1424,58 +1424,10 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/05/21/rabbitmq/">
-                    <div class="card-image">
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220521134315.jpg" class="responsive-img" alt="RabbitMq">
-                        
-                        <span class="card-title">RabbitMq</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            RabbitMq学习
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-21
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/" class="post-category">
-                                    消息中间件
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
-                        <span class="chip bg-color">消息队列</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
                 <a href="/2022/05/21/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3Spring%20Cloud%20Gateway/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/微信图片_20220521134208.jpg" class="responsive-img" alt="SpringCloud-Gateway">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/微信图片_20220521134208.jpg" class="responsive-img" alt="SpringCloud-Gateway">
                         
                         <span class="card-title">SpringCloud-Gateway</span>
                     </div>
@@ -1487,9 +1439,9 @@ new Valine({
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-21
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-21
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1511,6 +1463,58 @@ new Valine({
                     
                     <a href="/tags/Gateway/">
                         <span class="chip bg-color">Gateway</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/05/21/%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%B3%A8%E5%86%8C%E5%92%8C%E5%8F%91%E7%8E%B0Eureka/">
+                    <div class="card-image">
+                        
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220521134136.jpg" class="responsive-img" alt="SpringCloud-Eureka">
+                        
+                        <span class="card-title">SpringCloud-Eureka</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            服务的注册和发现Eureka
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/SpringCloud/" class="post-category">
+                                    SpringCloud
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/">
+                        <span class="chip bg-color">服务注册</span>
+                    </a>
+                    
+                    <a href="/tags/Eureka/">
+                        <span class="chip bg-color">Eureka</span>
                     </a>
                     
                 </div>
@@ -2144,6 +2148,12 @@ function delay() {
 
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

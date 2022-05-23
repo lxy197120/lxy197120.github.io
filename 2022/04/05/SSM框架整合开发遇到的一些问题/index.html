@@ -674,15 +674,15 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1649071630081.jpg"></p>
+                <p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1649071630081.jpg"></p>
 <h1 id="SSM开发时遇到的一些小问题"><a href="#SSM开发时遇到的一些小问题" class="headerlink" title="SSM开发时遇到的一些小问题"></a>SSM开发时遇到的一些小问题</h1><h2 id="1-使用mybatis-generator可能遇到的问题"><a href="#1-使用mybatis-generator可能遇到的问题" class="headerlink" title="1.使用mybatis generator可能遇到的问题"></a>1.使用mybatis generator可能遇到的问题</h2><h3 id="1-1-BaseResultMap问题"><a href="#1-1-BaseResultMap问题" class="headerlink" title="1.1 BaseResultMap问题"></a>1.1 BaseResultMap问题</h3><p>实体类名与表列名不一致</p>
 <p>resultMap:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318142051811.png"> </p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318142051811.png"> </p>
 <p>表列名字:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318142107637.png"> </p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318142107637.png"> </p>
 <p>出错信息:</p>
 <p>在Tomcat启动时:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318143830576.png"></p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318143830576.png"></p>
 <p>解决方法:我遇到的，同1.2会一起解决</p>
 <h3 id="1-2-mybatis-generator自动生成entity类时多出了XXXWithBLOBs"><a href="#1-2-mybatis-generator自动生成entity类时多出了XXXWithBLOBs" class="headerlink" title="1.2 mybatis generator自动生成entity类时多出了XXXWithBLOBs"></a>1.2 mybatis generator自动生成entity类时多出了XXXWithBLOBs</h3><p>在逆向生成时，除了会生成 <code>User</code> 类，还会生成一个继承 <code>User</code> 类的<code>UserWithBLOBs</code> 类。<br>解决如下</p>
 <p>在[<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=MyBatis&spm=1001.2101.3001.7020">MyBatis</a> Generator] 的官方英文文档中有提到这个问题：→MyBatis Generator</p>
@@ -704,15 +704,15 @@ add the property “nullCatalogMeansCurrent&#x3D;true” to your JDBC URL.<span 
 
 <h2 id="2-测试类Test出现错误-Class-not-found：”Test”"><a href="#2-测试类Test出现错误-Class-not-found：”Test”" class="headerlink" title="2. 测试类Test出现错误 Class not found：”Test”"></a>2. 测试类Test出现错误 Class not found：”Test”</h2><p>1.原因：多模块下，<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=maven&spm=1001.2101.3001.7020">maven</a>默认没有加载这个类</p>
 <p>2.解决如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318191730592.png"> </p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318191829189.png"> </p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318191730592.png"> </p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318191829189.png"> </p>
 <h2 id="3-webapp目录下静态资源扫描不到问题"><a href="#3-webapp目录下静态资源扫描不到问题" class="headerlink" title="3.webapp目录下静态资源扫描不到问题"></a>3.webapp目录下静态资源扫描不到问题</h2><p>众所周知springmvc默认有一个前端控制器来处理请求，如果是静态资源比如.html，就必须做静态资源的处理</p>
 <p>我这里遇到的问题是根目录下的index.html和login.html扫描不到，直接请求报404的错误</p>
 <p>解决方法：</p>
 <p>1.统一放在一个文件夹下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318192151695.png"> </p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318192151695.png"> </p>
 <p>2.对文件夹再次在springmvc.xml里进行扫描</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318192242349.png"> </p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220318192242349.png"> </p>
 <h2 id=""><a href="#" class="headerlink" title=""></a></h2>
                 
             </div>
@@ -908,10 +908,10 @@ add the property “nullCatalogMeansCurrent&#x3D;true” to your JDBC URL.<span 
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1280,7 +1280,7 @@ new Valine({
                 <a href="/2022/04/15/Spring_IOC/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1650095148354.jpg" class="responsive-img" alt="Spring IOC">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1650095148354.jpg" class="responsive-img" alt="Spring IOC">
                         
                         <span class="card-title">Spring IOC</span>
                     </div>
@@ -1332,7 +1332,7 @@ new Valine({
                 <a href="/2022/03/11/Maven%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1.jpg" class="responsive-img" alt="Maven基础">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/1.jpg" class="responsive-img" alt="Maven基础">
                         
                         <span class="card-title">Maven基础</span>
                     </div>
@@ -1997,6 +1997,12 @@ function delay() {
 
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

@@ -674,7 +674,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1646998689126.jpg"></p>
+                <p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1646998689126.jpg"></p>
 <h1 id="Redis笔记四"><a href="#Redis笔记四" class="headerlink" title="Redis笔记四"></a>Redis笔记四</h1><h2 id="1-Redis的事务管理"><a href="#1-Redis的事务管理" class="headerlink" title="1.Redis的事务管理"></a>1.Redis的事务管理</h2><p>Redis 事务可以一次执行多个命令， 并且带有以下两个重要的保证： </p>
 <p>事务是一个单独的隔离操作：事务中的所有命令都会序列化、按顺序地执行。事务在执行的过程中，不会被其他客 </p>
 <p>户端发送来的命令请求所打断。 </p>
@@ -724,9 +724,9 @@ QUEUED
 <h2 id="2-Redis发布订阅者模式"><a href="#2-Redis发布订阅者模式" class="headerlink" title="2. Redis发布订阅者模式"></a>2. Redis发布订阅者模式</h2><p>Redis 发布订阅(pub/sub)是一种消息通信模式：发送者(pub)发送消息，订阅者(sub)接收消息。 </p>
 <p>Redis 客户端可以订阅任意数量的频道。 </p>
 <p>下图展示了频道 channel1 ， 以及订阅这个频道的三个客户端 —— client2 、 client5 和 client1 之间的关系：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311175855202.png"> </p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311175855202.png"> </p>
 <p>当有新消息通过 PUBLISH 命令发送给频道 channel1 时， 这个消息就会被发送给订阅它的三个客户端：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311175921850.png"> </p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311175921850.png"> </p>
 <p>在我们实例中我们创建了订阅频道名为 redisMessage: </p>
 <pre class="line-numbers language-none"><code class="language-none">127.0.0.1:6379&gt; subscribe redisMessage
 Reading messages... (press Ctrl-C to quit) 
@@ -785,7 +785,7 @@ Reading messages... (press Ctrl-C to quit)
     <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>java001<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>常见异常: </p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20220311180518047.png"></p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/img/image-20220311180518047.png"></p>
 <p>解决方案: </p>
 <p>虚拟机客户端连接的ip是127.0.0.1,意思是连接的本机,其他机器无法连接,这里需要修改配置文件,将连接地址改为虚 </p>
 <p>拟机的地址,就可以了. </p>
@@ -794,7 +794,7 @@ Reading messages... (press Ctrl-C to quit)
 
 <p>重新启动服务,Jedis就可以正常连上了 </p>
 <p>Idea中控制台打印：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311180553905.png"></p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311180553905.png"></p>
 <p><strong>方案二：连接池</strong> </p>
 <p><strong>Jedis连接池连接，后面会使用Spring配置文件来整合</strong></p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 1.获取连接池配置对象,设置配置项 </span>
@@ -903,7 +903,7 @@ rdbcompression yes<span aria-hidden="true" class="line-numbers-rows"><span></spa
 <li>主机master配置:无需配置</li>
 </ul>
 <p>推荐主从模式同步数据: </p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311182021943.png"> </p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311182021943.png"> </p>
 <p>工作中一般选用：一主两从或一主一从 </p>
 <p>数据会同步到从服务器。在这个集群中的几台服务器上都有同样的数据。</p>
 <p><strong>主从搭建步骤</strong></p>
@@ -917,10 +917,10 @@ drwxr-xr-x. 3 root root 4096 2月 1 09:27 redis1<span aria-hidden="true" class="
 <p>第二步：修改从机的redis.conf </p>
 <p>语法：replicaof // replicaof 主机ip 主机端口号 </p>
 <p>提示:检索文件: 输入:/replicaof 当前页没有时，输入n，查找下一页 </p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311182133587.png"> </p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311182133587.png"> </p>
 <p>第三步：修改从机的port地址为6380 </p>
 <p>在从机redis.conf中修改 </p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311182157564.png"></p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311182157564.png"></p>
 <p>第四步：清除从机中的持久化文件</p>
 <pre class="line-numbers language-none"><code class="language-none">[root@localhost bin]# rm -rf appendonly.aof dump.rdb 
 [root@localhost bin]# ll 
@@ -972,7 +972,7 @@ drwxr-xr-x. 3 root root 4096 2月 1 09:27 redis1<span aria-hidden="true" class="
 <p>如果主机宕，开启选举工作，选择一个从做主机。环境准备：一主两从，启动任一从机时，启动哨兵模式 </p>
 <p>虽然哨兵(sentinel) 释出为一个单独的可执行文件 redis-sentinel ,但实际上它只是一个运行在特殊模式下的 Redis </p>
 <p>服务器，你可以在启动一个普通 Redis 服务器时通过给定 –sentinel 选项来启动哨兵(sentinel)。 </p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311182622457.png"></p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220311182622457.png"></p>
 <h2 id="7-Redis集群方案"><a href="#7-Redis集群方案" class="headerlink" title="7. Redis集群方案"></a>7. Redis集群方案</h2><p>有点多！！！不写了，详细百度咯</p>
 
                 
@@ -1169,10 +1169,10 @@ drwxr-xr-x. 3 root root 4096 2月 1 09:27 redis1<span aria-hidden="true" class="
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1541,7 +1541,7 @@ new Valine({
                 <a href="/2022/03/11/Redis%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1646998692227.jpg" class="responsive-img" alt="数据结构ofRedis">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1646998692227.jpg" class="responsive-img" alt="数据结构ofRedis">
                         
                         <span class="card-title">数据结构ofRedis</span>
                     </div>
@@ -1593,7 +1593,7 @@ new Valine({
                 <a href="/2022/03/11/Redis%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1646998713127.jpg" class="responsive-img" alt="Redis的基本介绍">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1646998713127.jpg" class="responsive-img" alt="Redis的基本介绍">
                         
                         <span class="card-title">Redis的基本介绍</span>
                     </div>
@@ -2258,6 +2258,12 @@ function delay() {
 
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

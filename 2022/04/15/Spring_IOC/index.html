@@ -678,7 +678,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1650095148354.jpg"></p>
+                <p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1650095148354.jpg"></p>
 <h1 id="Spring笔记二"><a href="#Spring笔记二" class="headerlink" title="Spring笔记二"></a>Spring笔记二</h1><h2 id="1-Spring-IOC"><a href="#1-Spring-IOC" class="headerlink" title="1. Spring IOC"></a>1. Spring IOC</h2><h3 id="1-1-IOC的概念"><a href="#1-1-IOC的概念" class="headerlink" title="1.1 IOC的概念"></a>1.1 IOC的概念</h3><p>Ioc—Inversion of Control，即“控制反转”，不是什么技术，一种设计思想。</p>
 <p>控制：指的是对象创建（实例化、管理）的权利<br>反转：控制权交给外部环境了（spring框架、 IoC容器）</p>
 <h3 id="1-2-获取Spring容器"><a href="#1-2-获取Spring容器" class="headerlink" title="1.2 获取Spring容器"></a>1.2 获取Spring容器</h3><p>1.BeanFactory：BeanFactory是Spring框架中IoC容器的顶层接⼝,它只是⽤来定义⼀些基础功能,定义⼀些基础规范</p>
@@ -735,7 +735,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>factory<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.kkb.bean.MyFactory<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>instanceTeam<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.kkb.bean.MyFactory<span class="token punctuation">"</span></span> <span class="token attr-name">factory-bean</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>factory<span class="token punctuation">"</span></span> <span class="token attr-name">factory-method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>instanceFun<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220414213338198.png"> </p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220414213338198.png"> </p>
 <h3 id="1-5-bean的作用域"><a href="#1-5-bean的作用域" class="headerlink" title="1.5 bean的作用域"></a>1.5 bean的作用域</h3><p><strong>单例模式： singleton</strong><br>对象出⽣：当创建容器时，对象就被创建了。<br>对象活着：只要容器在，对象⼀直活着。<br>对象死亡：当销毁容器时，对象就被销毁了。<br><strong>总结：单例模式的bean对象⽣命周期与容器相同。</strong><br><strong>多例模式： prototype</strong><br>对象出⽣：当使⽤对象时，创建新的对象实例。<br>对象活着：只要对象在使⽤中，就⼀直活着。<br>对象死亡：当对象⻓时间不⽤时，被java的垃圾回收器回收了。<br><strong>总结：多例模式的bean对象， spring框架只负责创建，不负责销毁。</strong></p>
 <h3 id="1-6-基于XML的DI"><a href="#1-6-基于XML的DI" class="headerlink" title="1.6 基于XML的DI"></a>1.6 基于XML的DI</h3><p>DI—Dependency Injection，即“依赖注入”：是组件之间依赖关系由容器在运行期决定，形象的说，即</p>
 <p>由容器动态的将某个依赖关系注入到组件之中。</p>
@@ -769,7 +769,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 <p><strong>创建对象的注解不生效</strong>。</p>
 <p>如果要扫描的包有多个，可以有以下方式扫描：</p>
 <p><strong>1</strong>、命名空间</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220414215145641.png"> </p>
+<p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220414215145641.png"> </p>
 <p><strong>2</strong>、使用多个<strong>context:component-scan</strong>指定不同的包路径</p>
 <pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!--多个一起包扫描--></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">context:</span>component-scan</span> <span class="token attr-name">base-package</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.kkb.TeamDao,com.kkb.TeamService,com.kkb.controller,com.kkb.bean<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -784,7 +784,7 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
 <p>时，类中无需 setter。当然，若属性有 setter，则也可将其加到 setter 上。</p>
 <h4 id="1-7-4-byType自动注入-Autowired"><a href="#1-7-4-byType自动注入-Autowired" class="headerlink" title="1.7.4 byType自动注入@Autowired"></a>1.7.4 byType自动注入@Autowired</h4><p>需要在引用属性上使用注解@Autowired，该注解默认使用按类型自动装配 Bean 的方式。使用该注解完</p>
 <p>成属性注入时，类中无需 setter。当然，若属性有 setter，则也可将其加到 setter 上。</p>
-<h4 id="1-7-5-byName自动注入-Autowired和-Qualifier"><a href="#1-7-5-byName自动注入-Autowired和-Qualifier" class="headerlink" title="1.7.5 byName自动注入@Autowired和@Qualifier"></a>1.7.5 byName自动注入@Autowired和@Qualifier</h4><p><img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220414215833007.png"> </p>
+<h4 id="1-7-5-byName自动注入-Autowired和-Qualifier"><a href="#1-7-5-byName自动注入-Autowired和-Qualifier" class="headerlink" title="1.7.5 byName自动注入@Autowired和@Qualifier"></a>1.7.5 byName自动注入@Autowired和@Qualifier</h4><p><img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/image-20220414215833007.png"> </p>
 <h3 id="1-8-自动注入-Resource"><a href="#1-8-自动注入-Resource" class="headerlink" title="1.8 自动注入@Resource"></a>1.8 自动注入@Resource</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//jdk版本高于1.6才有，jdk11里面没有javax.annotation,所以得在pom.xml先配置一下</span>
 <span class="token annotation punctuation">@Resource</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"teamService"</span><span class="token punctuation">,</span>type <span class="token operator">=</span> <span class="token class-name">TeamService</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token comment">//默认按照名称进行装配，如果没有名称相符的，则按照类型进行装配</span>
 <span class="token keyword">private</span> <span class="token class-name">TeamService</span> teamService<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -988,10 +988,10 @@ box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/lxy197120.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1357,18 +1357,18 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/16/Spring%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/">
+                <a href="/2022/04/16/Spring%E6%A6%82%E8%BF%B0/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/66.jpg" class="responsive-img" alt="Spring事务管理">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1650095150738.jpg" class="responsive-img" alt="Spring概述">
                         
-                        <span class="card-title">Spring事务管理</span>
+                        <span class="card-title">Spring概述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Spring事务管理的一系列知识点
+                            什么是Sping? 这里会告诉你
                         
                     </div>
                     <div class="publish-info">
@@ -1390,8 +1390,8 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Springs%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/">
-                        <span class="chip bg-color">Springs事务管理</span>
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
                     </a>
                     
                 </div>
@@ -1408,7 +1408,7 @@ new Valine({
                 <a href="/2022/04/05/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1649071630081.jpg" class="responsive-img" alt="SSM开发时遇到的一些小问题">
+                        <img src=".\themes\hexo-theme-matery\source\medias\ljj1.gif" data-original="https://cdn.jsdelivr.net/gh/lxy197120/PicBed/imgs/mmexport1649071630081.jpg" class="responsive-img" alt="SSM开发时遇到的一些小问题">
                         
                         <span class="card-title">SSM开发时遇到的一些小问题</span>
                     </div>
@@ -2073,6 +2073,12 @@ function delay() {
 
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
